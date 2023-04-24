@@ -4977,6 +4977,264 @@ public class Main {
 
         }
 
+        //BALON COC
+        {
+            //Fondasi Parrent (invisible)
+            objects.add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0f, 0f, 0f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0f,
+                    0f,
+                    0f,
+                    36,
+                    18
+                    , 1));
+            objects.get(7).scaleObject(0f, 0f, 0f);
+
+            //Ballon lingkaran merah
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(1f, 0f, 0f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    1.5f,
+                    1.5f,
+                    1.5f,
+                    72,
+                    36
+                    , 2));
+
+            objects.get(7).getChildObject().get(0).scaleObject(1f, 1f, 1f);
+            objects.get(7).getChildObject().get(0).translateObject(0f, 1f, 0f);
+
+            //wadah skeleton tp gada skeleton oke, hehe
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.227f, 0.133f, 0.074f, 0.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.5f,
+                    0.3f,
+                    0.5f,
+                    72,
+                    36
+                    , 14));
+
+            objects.get(7).getChildObject().get(1).scaleObject(1f, 1f, 1f);
+            objects.get(7).getChildObject().get(1).translateObject(0f, -2f, 0f);
+
+            //tali kiri belakang
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    1.2f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(2).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(2).translateObject(-0.64f, -0.68f, 0.42f);
+            objects.get(7).getChildObject().get(2).rotateObject(-50f, 0f, 0.0f, 1f);
+
+            //tali kiri depan
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    1.2f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(3).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(3).translateObject(-0.64f, -0.68f, -0.42f);
+            objects.get(7).getChildObject().get(3).rotateObject(-50f, 0f, 0.0f, 1f);
+
+            //tali kanan belakang
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    1.2f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(4).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(4).translateObject(0.64f, -0.68f, 0.42f);
+            objects.get(7).getChildObject().get(4).rotateObject(50f, 0f, 0.0f, 1f);
+
+            //tali kanan depan
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    1.2f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(5).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(5).translateObject(0.64f, -0.68f, -0.42f);
+            objects.get(7).getChildObject().get(5).rotateObject(50f, 0f, 0.0f, 1f);
+
+            //wadah skeleton tp gada skeleton oke, hehe tp ini yg nigga ehehe2x
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0f, 0f, 0f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.5f,
+                    0.3f,
+                    0.5f,
+                    72,
+                    36
+                    , 14));
+
+            objects.get(7).getChildObject().get(6).scaleObject(0.9f, 0.1f, 0.9f);
+            objects.get(7).getChildObject().get(6).translateObject(0f, -1.45f, 0f);
+
+
+            //tmpt api
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0f, 0f, 0f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.3f,
+                    0.1f,
+                    0.3f,
+                    72,
+                    36
+                    , 2));
+
+            objects.get(7).getChildObject().get(7).scaleObject(0.9f, 0.1f, 0.9f);
+            objects.get(7).getChildObject().get(7).translateObject(0f, -0.8f, 0f);
+
+            //tali api kiri belakang
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    0.4f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(8).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(8).translateObject(-0.4f, -0.53f, 0.2f);
+            objects.get(7).getChildObject().get(8).rotateObject(-50f, 0f, 0.0f, 1f);
+
+            //tali api kiri depan
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    0.4f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(9).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(9).translateObject(-0.4f, -0.53f, -0.2f);
+            objects.get(7).getChildObject().get(9).rotateObject(-50f, 0f, 0.0f, 1f);
+
+            //tali api kanan belakang
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    0.4f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(10).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(10).translateObject(0.4f, -0.53f, 0.2f);
+            objects.get(7).getChildObject().get(10).rotateObject(50f, 0f, 0.0f, 1f);
+
+            //tali api kanan depan
+            objects.get(7).getChildObject().add(new Sphere(
+                    Arrays.asList(
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                            new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                    ),
+                    new ArrayList<>(),
+                    new Vector4f(0.850f, 0.635f, 0.450f, 1.0f),
+                    Arrays.asList(0.0f, 0.0f, 0.0f),
+                    0.1f,
+                    0.4f,
+                    0.1f,
+                    72,
+                    36
+                    , 1));
+
+            objects.get(7).getChildObject().get(11).scaleObject(0.1f, 1f, 0.2f);
+            objects.get(7).getChildObject().get(11).translateObject(0.4f, -0.53f, -0.2f);
+            objects.get(7).getChildObject().get(11).rotateObject(50f, 0f, 0.0f, 1f);
+
+        }
+
         //Translasi dan Scaling Objek
         {
             //Cannon Kiri
@@ -5002,7 +5260,12 @@ public class Main {
             //Air Sweeper Kanan Depan
             objects.get(5).translateObject(5.75f, 1.2f, 6f);
             objects.get(5).scaleObject(0.50f, 0.50f, 0.50f);
+
+            //Balon
+            objects.get(7).translateObject(0f, 5f, -3f);
+//                objects.get(7).scaleObject(0.50f, 0.50f, 0.50f);
         }
+
     }
 
     public void input() {
@@ -5296,11 +5559,19 @@ public class Main {
                 objects.get(2).getChildObject().get(14).rotateObjectOnPoint(0.010f, 0f, 1f, 0f, objects.get(2).getChildObject().get(0).getCenterPoint().get(0), objects.get(2).getChildObject().get(0).getCenterPoint().get(1), objects.get(2).getChildObject().get(0).getCenterPoint().get(2));
                 objects.get(2).getChildObject().get(15).rotateObjectOnPoint(0.010f, 0f, 1f, 0f, objects.get(2).getChildObject().get(0).getCenterPoint().get(0), objects.get(2).getChildObject().get(0).getCenterPoint().get(1), objects.get(2).getChildObject().get(0).getCenterPoint().get(2));
                 objects.get(2).getChildObject().get(16).rotateObjectOnPoint(0.010f, 0f, 1f, 0f, objects.get(2).getChildObject().get(0).getCenterPoint().get(0), objects.get(2).getChildObject().get(0).getCenterPoint().get(1), objects.get(2).getChildObject().get(0).getCenterPoint().get(2));
+
+                objects.get(5).getChildObject().get(9).rotateObjectOnPoint(0.010f, 0f, 1f, 0f, objects.get(5).getChildObject().get(0).getCenterPoint().get(0), objects.get(5).getChildObject().get(0).getCenterPoint().get(1), objects.get(5).getChildObject().get(0).getCenterPoint().get(2));
+                objects.get(5).getChildObject().get(14).rotateObjectOnPoint(0.010f, 0f, 1f, 0f, objects.get(5).getChildObject().get(0).getCenterPoint().get(0), objects.get(5).getChildObject().get(0).getCenterPoint().get(1), objects.get(5).getChildObject().get(0).getCenterPoint().get(2));
+                objects.get(5).getChildObject().get(15).rotateObjectOnPoint(0.010f, 0f, 1f, 0f, objects.get(5).getChildObject().get(0).getCenterPoint().get(0), objects.get(5).getChildObject().get(0).getCenterPoint().get(1), objects.get(5).getChildObject().get(0).getCenterPoint().get(2));
+                objects.get(5).getChildObject().get(16).rotateObjectOnPoint(0.010f, 0f, 1f, 0f, objects.get(5).getChildObject().get(0).getCenterPoint().get(0), objects.get(5).getChildObject().get(0).getCenterPoint().get(1), objects.get(5).getChildObject().get(0).getCenterPoint().get(2));
             }
 
             if (window.isKeyPressed(GLFW_KEY_B)) {
                 objects.get(2).getChildObject().get(20).rotateObjectOnPoint(0.010f, 1f, 0f, 0f, objects.get(2).getChildObject().get(0).getCenterPoint().get(0), objects.get(2).getChildObject().get(0).getCenterPoint().get(1), objects.get(2).getChildObject().get(0).getCenterPoint().get(2));
                 objects.get(2).getChildObject().get(21).rotateObjectOnPoint(0.010f, 1f, 0f, 0f, objects.get(2).getChildObject().get(0).getCenterPoint().get(0), objects.get(2).getChildObject().get(0).getCenterPoint().get(1), objects.get(2).getChildObject().get(0).getCenterPoint().get(2));
+
+                objects.get(5).getChildObject().get(20).rotateObjectOnPoint(0.010f, 1f, 0f, 0f, objects.get(5).getChildObject().get(0).getCenterPoint().get(0), objects.get(5).getChildObject().get(0).getCenterPoint().get(1), objects.get(5).getChildObject().get(0).getCenterPoint().get(2));
+                objects.get(5).getChildObject().get(21).rotateObjectOnPoint(0.010f, 1f, 0f, 0f, objects.get(5).getChildObject().get(0).getCenterPoint().get(0), objects.get(5).getChildObject().get(0).getCenterPoint().get(1), objects.get(5).getChildObject().get(0).getCenterPoint().get(2));
             }
         }
 
@@ -5308,43 +5579,19 @@ public class Main {
         {
             if (window.isKeyPressed(GLFW_KEY_W)) {
                 camera.addRotation((float) Math.toRadians(0.1), (float) Math.toRadians(0));
-//                for (Object i : objects) {
-//                    i.rotateObjectOnPoint(0.010f, 1f, 0f, 0f, i.getCenterPoint().get(0), i.getCenterPoint().get(1), i.getCenterPoint().get(2));
-//                }
             }
 
             if (window.isKeyPressed(GLFW_KEY_S)) {
                 camera.addRotation((float) Math.toRadians(-0.1), (float) Math.toRadians(0));
-//                for (Object i : objects) {
-//                    i.rotateObjectOnPoint(-0.010f, 1f, 0f, 0f, i.getCenterPoint().get(0), i.getCenterPoint().get(1), i.getCenterPoint().get(2));
-//                }
             }
 
             if (window.isKeyPressed(GLFW_KEY_A)) {
                 camera.addRotation((float) Math.toRadians(0), (float) Math.toRadians(0.1));
-//                for (Object i : objects) {
-//                    i.rotateObjectOnPoint(0.010f, 0f, 1f, 0f, i.getCenterPoint().get(0), i.getCenterPoint().get(1), i.getCenterPoint().get(2));
-//                }
             }
 
             if (window.isKeyPressed(GLFW_KEY_D)) {
                 camera.addRotation((float) Math.toRadians(0), (float) Math.toRadians(-0.1));
-//                for (Object i : objects) {
-//                    i.rotateObjectOnPoint(-0.010f, 0f, 1f, 0f, i.getCenterPoint().get(0), i.getCenterPoint().get(1), i.getCenterPoint().get(2));
-//                }
             }
-
-//            if (window.isKeyPressed(GLFW_KEY_Q)) {
-//                for (Object i : objects) {
-//                    i.rotateObjectOnPoint(0.010f, 0f, 0f, 1f, 0, 0, 0);
-//                }
-//            }
-//
-//            if (window.isKeyPressed(GLFW_KEY_E)) {
-//                for (Object i : objects) {
-//                    i.rotateObjectOnPoint(-0.010f, 0f, 0f, 1f, 0, 0, 0);
-//                }
-//            }
 
 //            if (window.isKeyPressed(GLFW_KEY_W)) {
 //                for (Object i : objects) {
@@ -5372,20 +5619,8 @@ public class Main {
 
         }
 
-        //IJKL + UO + SHIFT + CTRTL
+        //IJKL + SHIFT + CTRTL
         {
-            if (window.isKeyPressed(GLFW_KEY_U)) {
-                for (Object i : objects) {
-                    i.translateObject(0f, 0f, 0.001f);
-                }
-            }
-
-            if (window.isKeyPressed(GLFW_KEY_O)) {
-                for (Object i : objects) {
-                    i.translateObject(0f, 0f, -0.001f);
-                }
-            }
-
             if (window.isKeyPressed(GLFW_KEY_I)) {
                 camera.moveUp(0.01f);
             }
