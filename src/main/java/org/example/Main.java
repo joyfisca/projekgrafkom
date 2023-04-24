@@ -5114,7 +5114,7 @@ public class Main {
             objects.get(7).getChildObject().get(5).translateObject(0.64f, -0.68f, -0.42f);
             objects.get(7).getChildObject().get(5).rotateObject(50f, 0f, 0.0f, 1f);
 
-            //wadah skeleton tp gada skeleton oke, hehe tp ini yg nigga ehehe2x
+            //wadah skeleton
             objects.get(7).getChildObject().add(new Sphere(
                     Arrays.asList(
                             new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
