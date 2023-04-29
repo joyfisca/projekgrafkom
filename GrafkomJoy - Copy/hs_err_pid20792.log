@@ -1,0 +1,2909 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000001ccb5bfff80, pid=20792, tid=29632
+#
+# JRE version: OpenJDK Runtime Environment (19.0.2+7) (build 19.0.2+7-44)
+# Java VM: OpenJDK 64-Bit Server VM (19.0.2+7-44, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  0x000001ccb5bfff80
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:J:\InteliJ\IntelliJ IDEA Community Edition 2022.3.2\lib\idea_rt.jar=51247:J:\InteliJ\IntelliJ IDEA Community Edition 2022.3.2\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 org.example.Main
+
+Host: 11th Gen Intel(R) Core(TM) i9-11900H @ 2.50GHz, 16 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.1485)
+Time: Mon Apr 24 00:24:15 2023 SE Asia Standard Time elapsed time: 1112.656076 seconds (0d 0h 18m 32s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001cc894c3360):  JavaThread "main" [_thread_in_native, id=29632, stack(0x00000081b6f00000,0x00000081b7000000)]
+
+Stack: [0x00000081b6f00000,0x00000081b7000000],  sp=0x00000081b6fff170,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x000001ccb5bfff80
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 1533  org.lwjgl.opengl.GL11C.glDrawArrays(III)V (0 bytes) @ 0x000001cc98ffc071 [0x000001cc98ffc020+0x0000000000000051]
+J 2331% c2 org.example.Main.loop()V (1015 bytes) @ 0x000001cc9918dcb0 [0x000001cc9918d4a0+0x0000000000000810]
+j  org.example.Main.run()V+5
+j  org.example.Main.main([Ljava/lang/String;)V+7
+v  ~StubRoutines::call_stub 0x000001cc988310e8
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x000001ccbecfaf80, RBX=0x000001ccb5b30000, RCX=0x0000000000000000, RDX=0x0000000000000034
+RSP=0x00000081b6fff170, RBP=0x000001ccb1cb2900, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x0000000000000000, R9 =0x0000000000000034, R10=0x000001ccb1cb2900, R11=0x0000000000000000
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x0000000000000009, R15=0x000001ccbecfaf80
+RIP=0x000001ccb5bfff80, EFLAGS=0x0000000000010202
+
+
+Register to memory mapping:
+
+RIP=0x000001ccb5bfff80 points into unknown readable memory: 0x893889046e8b3e8b | 8b 3e 8b 6e 04 89 38 89
+RAX=0x000001ccbecfaf80 points into unknown readable memory: 0x3e99999abd23d70a | 0a d7 23 bd 9a 99 99 3e
+RBX=0x000001ccb5b30000 points into unknown readable memory: 0x000001ccb20b6c40 | 40 6c 0b b2 cc 01 00 00
+RCX=0x0 is NULL
+RDX=0x0000000000000034 is an unknown value
+RSP=0x00000081b6fff170 is pointing into the stack for thread: 0x000001cc894c3360
+RBP=0x000001ccb1cb2900 points into unknown readable memory: 0x0000300400000009 | 09 00 00 00 04 30 00 00
+RSI=0x0 is NULL
+RDI=0x0 is NULL
+R8 =0x0 is NULL
+R9 =0x0000000000000034 is an unknown value
+R10=0x000001ccb1cb2900 points into unknown readable memory: 0x0000300400000009 | 09 00 00 00 04 30 00 00
+R11=0x0 is NULL
+R12=0x0 is NULL
+R13=0x0 is NULL
+R14=0x0000000000000009 is an unknown value
+R15=0x000001ccbecfaf80 points into unknown readable memory: 0x3e99999abd23d70a | 0a d7 23 bd 9a 99 99 3e
+
+
+Top of Stack: (sp=0x00000081b6fff170)
+0x00000081b6fff170:   0000000100000000 0000000000000000
+0x00000081b6fff180:   0000000000000034 000001ccb5b30000
+0x00000081b6fff190:   000001ccb1cb2900 00007ffc0cf8278e
+0x00000081b6fff1a0:   000001ccb5b30000 000001ccb1cb2900
+0x00000081b6fff1b0:   0000000000000034 000001ccb5b30000
+0x00000081b6fff1c0:   000001ccb1cb2900 0000000000000003
+0x00000081b6fff1d0:   0000000000000000 000001ccc0f23d58
+0x00000081b6fff1e0:   0000000000000009 000001ccb1cb2900
+0x00000081b6fff1f0:   0000000000000034 0000000000000000
+0x00000081b6fff200:   000001ccb5b30000 00007ffc0cf7ea3d
+0x00000081b6fff210:   0000000000000001 0000000000000009
+0x00000081b6fff220:   0000000000000034 0000000000000000
+0x00000081b6fff230:   0000000000000034 000001ccb1cb2900
+0x00000081b6fff240:   0000000000000034 00007ffc0cf7ec86
+0x00000081b6fff250:   000001ccb5b30000 000001ccc0f23d58
+0x00000081b6fff260:   0000000000000000 000001ccb1cb2900 
+
+Instructions: (pc=0x000001ccb5bfff80)
+0x000001ccb5bffe80:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffe90:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffea0:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffeb0:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffec0:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffed0:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffee0:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffef0:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bfff00:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bfff10:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bfff20:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bfff30:   00 00 00 00 00 00 00 00 80 ff ff ff 00 ff 00 00
+0x000001ccb5bfff40:   48 83 ec 28 48 89 6c 24 20 48 89 5c 24 18 48 89
+0x000001ccb5bfff50:   74 24 10 48 89 7c 24 08 48 8b d9 48 8b c2 49 8b
+0x000001ccb5bfff60:   c8 49 8b d1 48 be 00 8d b8 b5 cc 01 00 00 48 8b
+0x000001ccb5bfff70:   36 48 8b b6 08 03 00 00 48 8d 3c 49 48 8d 34 be
+0x000001ccb5bfff80:   8b 3e 8b 6e 04 89 38 89 68 04 8b 7e 08 89 78 08
+0x000001ccb5bfff90:   48 83 c0 0c ff c1 ff ca 75 ca 48 8b 7c 24 08 48
+0x000001ccb5bfffa0:   8b 74 24 10 48 8b 5c 24 18 48 8b 6c 24 20 48 83
+0x000001ccb5bfffb0:   c4 28 c3 00 00 00 00 00 c0 ff ff ff 80 00 00 00
+0x000001ccb5bfffc0:   48 b8 60 96 bc b5 cc 01 00 00 48 8b 00 49 ba d8
+0x000001ccb5bfffd0:   d7 b7 b5 cc 01 00 00 48 83 ec 28 48 83 c4 28 c3
+0x000001ccb5bfffe0:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5bffff0:   00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00
+0x000001ccb5c00000:   a0 ad 0f 00 00 00 00 00 6f d6 d5 64 ae 01 00 00
+0x000001ccb5c00010:   80 07 00 00 38 04 00 00 40 33 80 c1 00 00 00 00
+0x000001ccb5c00020:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5c00030:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5c00040:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5c00050:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5c00060:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000001ccb5c00070:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x0000000100000000 is an unknown value
+stack at sp + 1 slots: 0x0 is NULL
+stack at sp + 2 slots: 0x0000000000000034 is an unknown value
+stack at sp + 3 slots: 0x000001ccb5b30000 points into unknown readable memory: 0x000001ccb20b6c40 | 40 6c 0b b2 cc 01 00 00
+stack at sp + 4 slots: 0x000001ccb1cb2900 points into unknown readable memory: 0x0000300400000009 | 09 00 00 00 04 30 00 00
+stack at sp + 5 slots: 0x00007ffc0cf8278e nvoglv64.dll
+stack at sp + 6 slots: 0x000001ccb5b30000 points into unknown readable memory: 0x000001ccb20b6c40 | 40 6c 0b b2 cc 01 00 00
+stack at sp + 7 slots: 0x000001ccb1cb2900 points into unknown readable memory: 0x0000300400000009 | 09 00 00 00 04 30 00 00
+
+
+Compiled method (n/a) 1112729 1533     n 0       org.lwjgl.opengl.GL11C::glDrawArrays (native)
+ total in heap  [0x000001cc98ffbe90,0x000001cc98ffc248] = 952
+ relocation     [0x000001cc98ffbff0,0x000001cc98ffc020] = 48
+ main code      [0x000001cc98ffc020,0x000001cc98ffc240] = 544
+ oops           [0x000001cc98ffc240,0x000001cc98ffc248] = 8
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Entry Point]
+  # {method} {0x000001ccadbac660} 'glDrawArrays' '(III)V' in 'org/lwjgl/opengl/GL11C'
+  # parm0:    rdx       = int
+  # parm1:    r8        = int
+  # parm2:    r9        = int
+  #           [sp+0x80]  (sp of caller)
+  0x000001cc98ffc020: 448b 5208 | 49bb 0000 | 0000 0800 | 0000 4d03 | d349 3bc2 | 0f84 0600 
+
+  0x000001cc98ffc038: ;   {runtime_call ic_miss_stub}
+  0x000001cc98ffc038: 0000 e941 | 5f89 ff90 
+[Verified Entry Point]
+  0x000001cc98ffc040: 8984 2400 | 90ff ff55 | 488b ec48 | 83ec 704c | 894c 2420 | 4d8b c84c 
+
+  0x000001cc98ffc058: ;   {oop(a 'java/lang/Class'{0x00000007036d4080} = 'org/lwjgl/opengl/GL11C')}
+  0x000001cc98ffc058: 8bc2 49be | 8040 6d03 | 0700 0000 | 4c89 7424 | 584c 8d74 | 2458 498b | d6c5 f877 
+
+  0x000001cc98ffc074: ;   {internal_word}
+  0x000001cc98ffc074: 49ba 71c0 | ff98 cc01 | 0000 4d89 | 97c8 0200 | 0049 89a7 | c002 0000 
+
+  0x000001cc98ffc08c: ;   {external_word}
+  0x000001cc98ffc08c: 49ba c984 | bf22 fc7f | 0000 4180 | 3a00 0f84 | 5000 0000 | 5241 5041 
+
+  0x000001cc98ffc0a4: ;   {metadata({method} {0x000001ccadbac660} 'glDrawArrays' '(III)V' in 'org/lwjgl/opengl/GL11C')}
+  0x000001cc98ffc0a4: 5148 ba58 | c6ba adcc | 0100 0049 | 8bcf 4883 | ec20 40f6 | c40f 0f84 | 1a00 0000 | 4883 ec08 
+  0x000001cc98ffc0c4: ;   {runtime_call}
+  0x000001cc98ffc0c4: 49ba d027 | 7722 fc7f | 0000 41ff | d248 83c4 | 08e9 0d00 
+
+  0x000001cc98ffc0d8: ;   {runtime_call}
+  0x000001cc98ffc0d8: 0000 49ba | d027 7722 | fc7f 0000 | 41ff d248 | 83c4 2041 | 5941 585a | 498d 8fe0 | 0200 0041 
+  0x000001cc98ffc0f8: c787 7403 | 0000 0400 
+
+  0x000001cc98ffc100: ;   {runtime_call}
+  0x000001cc98ffc100: 0000 49ba | 90c5 d5b3 | fc7f 0000 | 41ff d2c5 | f877 41c7 | 8774 0300 | 0005 0000 | 00f0 8344 
+  0x000001cc98ffc120: 24c0 0049 | 3baf 7803 | 0000 0f87 | 1100 0000 | 4181 bf70 | 0300 0000 | 0000 000f | 8424 0000 
+  0x000001cc98ffc140: 00c5 f877 | 498b cf4c | 8be4 4883 | ec20 4883 
+
+  0x000001cc98ffc150: ;   {runtime_call}
+  0x000001cc98ffc150: e4f0 49ba | 0015 8222 | fc7f 0000 | 41ff d249 | 8be4 4d33 | e441 c787 | 7403 0000 | 0800 0000 
+  0x000001cc98ffc170: 4181 bfe8 | 0300 0002 | 0000 000f | 8499 0000 
+
+  0x000001cc98ffc180: ;   {external_word}
+  0x000001cc98ffc180: 0049 bac9 | 84bf 22fc | 7f00 0041 | 803a 000f | 8446 0000 
+
+  0x000001cc98ffc194: ;   {metadata({method} {0x000001ccadbac660} 'glDrawArrays' '(III)V' in 'org/lwjgl/opengl/GL11C')}
+  0x000001cc98ffc194: 0048 ba58 | c6ba adcc | 0100 0049 | 8bcf 4883 | ec20 40f6 | c40f 0f84 | 1a00 0000 | 4883 ec08 
+  0x000001cc98ffc1b4: ;   {runtime_call}
+  0x000001cc98ffc1b4: 49ba d027 | 7722 fc7f | 0000 41ff | d248 83c4 | 08e9 0d00 
+
+  0x000001cc98ffc1c8: ;   {runtime_call}
+  0x000001cc98ffc1c8: 0000 49ba | d027 7722 | fc7f 0000 | 41ff d248 | 83c4 2049 | c787 c002 | 0000 0000 | 0000 49c7 
+  0x000001cc98ffc1e8: 87c8 0200 | 0000 0000 | 00c5 f877 | 498b 8f50 | 0300 00c7 | 8100 0100 | 0000 0000 | 00c9 4981 
+  0x000001cc98ffc208: 7f08 0000 | 0000 0f85 | 0100 0000 
+
+  0x000001cc98ffc214: ;   {runtime_call StubRoutines (1)}
+  0x000001cc98ffc214: c3e9 e64c | 83ff c5f8 | 774c 8be4 | 4883 ec20 | 4883 e4f0 
+
+  0x000001cc98ffc228: ;   {runtime_call}
+  0x000001cc98ffc228: 49ba 305c | 7722 fc7f | 0000 41ff | d249 8be4 | 4d33 e4e9 | 41ff ffff 
+[/MachCode]
+
+
+Compiled method (c2) 1112737 2331 %     4       org.example.Main::loop @ 256 (1015 bytes)
+ total in heap  [0x000001cc9918cc90,0x000001cc99195a08] = 36216
+ relocation     [0x000001cc9918cdf0,0x000001cc9918d478] = 1672
+ constants      [0x000001cc9918d480,0x000001cc9918d4a0] = 32
+ main code      [0x000001cc9918d4a0,0x000001cc99190860] = 13248
+ stub code      [0x000001cc99190860,0x000001cc99190d28] = 1224
+ oops           [0x000001cc99190d28,0x000001cc99190d38] = 16
+ metadata       [0x000001cc99190d38,0x000001cc99190e60] = 296
+ scopes data    [0x000001cc99190e60,0x000001cc99193b60] = 11520
+ scopes pcs     [0x000001cc99193b60,0x000001cc99194f70] = 5136
+ dependencies   [0x000001cc99194f70,0x000001cc99194fa8] = 56
+ handler table  [0x000001cc99194fa8,0x000001cc99195740] = 1944
+ nul chk table  [0x000001cc99195740,0x000001cc99195a08] = 712
+
+
+[Constant Pool]
+             Address          hex4                    hex8      
+  0x000001cc9918d480:   0x00000000      0x3f2eaeaf00000000      
+  0x000001cc9918d484:   0x3f2eaeaf                              
+  0x000001cc9918d488:   0x3d30b0b1      0x3f76f6f73d30b0b1      
+  0x000001cc9918d48c:   0x3f76f6f7                              
+  0x000001cc9918d490:   0x40a00000      0xf4f4f4f440a00000      
+  0x000001cc9918d494:   0xf4f4f4f4                              
+  0x000001cc9918d498:   0xf4f4f4f4      0xf4f4f4f4f4f4f4f4      
+  0x000001cc9918d49c:   0xf4f4f4f4                              
+
+[MachCode]
+[Verified Entry Point]
+  # {method} {0x000001ccad80fa30} 'loop' '()V' in 'org/example/Main'
+  0x000001cc9918d4a0: ;   {no_reloc}
+  0x000001cc9918d4a0: cc66 6666 | 0f1f 8400 | 0000 0000 | 6666 6690 | 8984 2400 | 90ff ff55 | 4883 ec70 | 488b 6a10 
+  0x000001cc9918d4c0: 488b 5a08 | 488b ca49 | ba00 9b0e | 22fc 7f00 | 0041 ffd2 | 4885 ed0f | 84ef 1e00 | 0044 8b5d 
+  0x000001cc9918d4e0: ;   {metadata('org/example/Main')}
+  0x000001cc9918d4e0: 0841 81fb | 0030 0001 | 0f85 f51d | 0000 4c8b | d548 85db | 0f84 da1e | 0000 448b 
+
+  0x000001cc9918d4fc: ;   {metadata('java/util/Iterator')}
+  0x000001cc9918d4fc: 5b08 48b8 | c0b1 0000 | 0800 0000 | 48be 0000 | 0000 0800 | 0000 4903 | f34c 8b5e | 204c 3bd8 
+  0x000001cc9918d51c: 0f85 a11d | 0000 4d85 | d20f 8435 
+
+  0x000001cc9918d528: ;   {section_word}
+  0x000001cc9918d528: 2c00 00c5 | fa10 0d5d 
+
+  0x000001cc9918d530: ;   {section_word}
+  0x000001cc9918d530: ffff ffc5 | fa10 0551 
+
+  0x000001cc9918d538: ;   {section_word}
+  0x000001cc9918d538: ffff ffc5 | fa10 1d41 
+
+  0x000001cc9918d540: ;   {section_word}
+  0x000001cc9918d540: ffff ffc5 | fa10 153d | ffff ffe9 | 3208 0000 | c481 7a11 | 4cc4 0ce9 | 071b 0000 | 0f1f 4000 
+  0x000001cc9918d560: 448b 5c24 | 5844 8944 | 2458 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 
+  0x000001cc9918d580: 2454 e9ec | 1500 0066 | 0f1f 8400 | 0000 0000 | 448b 5c24 | 3089 6c24 | 3044 8b44 | 243c 478b 
+  0x000001cc9918d5a0: 44c4 0c44 | 3b44 2438 | 0f85 8a1d | 0000 448b | 5424 3c47 | 8b54 d410 | 448b 4c24 | 3045 3bca 
+  0x000001cc9918d5c0: 0f8d a21d | 0000 448b | 5424 3c47 | 8b4c d414 
+
+  0x000001cc9918d5d0: ; implicit exception: dispatches to 0x000001cc991902a0
+  0x000001cc9918d5d0: 478b 54cc | 0c44 8b44 | 2430 453b | c20f 8db5 | 1d00 008b | 6c24 30ff | c545 3bc2 | 0f83 2b1d 
+  0x000001cc9918d5f0: 0000 4f8d | 14cc 478b | 5c82 1047 | 8b54 dc08 
+
+  0x000001cc9918d600: ;   {metadata('Engine/Sphere')}
+  0x000001cc9918d600: 4181 faa8 | fb02 010f | 857f 2c00 | 004c 8b54 | 2420 458b | 5274 4c8b | 4424 2045 | 8b48 784b 
+  0x000001cc9918d620: 8d14 dc4d | 8bc1 49c1 | e003 4d8b | ca49 c1e1 
+
+  0x000001cc9918d630: ;   {optimized virtual_call}
+  0x000001cc9918d630: 0366 90e8 
+
+  0x000001cc9918d634: ; ImmutableOopMap {[32]=Oop [40]=Oop [60]=NarrowOop }
+                      ;*invokevirtual draw {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.example.Main::loop@74 (line 6180)
+  0x000001cc9918d634: 8829 e8ff | 4d8b 9780 
+
+  0x000001cc9918d63c: ; ImmutableOopMap {[32]=Oop [40]=Oop [60]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@77 (line 6181)
+                      ;   {poll}
+  0x000001cc9918d63c: 0300 0041 | 8502 448b | 5c24 3c47 | 8b54 dc10 | 413b ea0f | 853b ffff | ff4c 8b4c | 2420 458b 
+  0x000001cc9918d65c: 4118 478b | 5cc4 1045 | 85db 0f84 | 9301 0000 | 4c89 4c24 | 2047 8b54 | c40c 4489 | 5424 404f 
+  0x000001cc9918d67c: 8d14 c44c | 8954 2428 | 4489 4424 | 4441 bbff | ffff ff45 | 33d2 4489 | 5424 5844 | 8b54 2444 
+  0x000001cc9918d69c: 478b 54d4 | 0c44 3b54 | 2440 0f85 | 0426 0000 | 448b 4424 | 4447 8b54 | c410 448b | 4424 5845 
+  0x000001cc9918d6bc: 3bc2 0f8d | 1026 0000 | 448b 4424 | 4447 8b44 | c414 478b | 54c4 0c44 | 8b4c 2458 | 453b ca0f 
+  0x000001cc9918d6dc: 8d0f 2600 | 0041 ffc1 | 4489 4c24 | 3844 8b5c | 2458 453b | da0f 8355 | 1d00 004f | 8d14 c447 
+  0x000001cc9918d6fc: 8b54 9a10 
+
+  0x000001cc9918d700: ; implicit exception: dispatches to 0x000001cc991904f8
+  0x000001cc9918d700: 478b 44d4 
+
+  0x000001cc9918d704: ;   {metadata('Engine/Object')}
+  0x000001cc9918d704: 0841 81f8 | 80f5 0201 | 0f85 ee2a | 0000 49c1 | e203 4c89 | 5424 3045 | 8b5a 1c47 | 8b54 dc08 
+  0x000001cc9918d724: 4c8b 4424 | 2045 8b48 | 7844 894c | 243c 418b 
+
+  0x000001cc9918d734: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918d734: 6874 4181 | faa0 fa0d | 000f 8565 | 1e00 004f | 8d14 dc45 | 8b5a 1041 | 83fb 030f | 8cbb 2500 
+  0x000001cc9918d754: 0048 8b54 
+
+  0x000001cc9918d758: ;   {optimized virtual_call}
+  0x000001cc9918d758: 2430 90e8 
+
+  0x000001cc9918d75c: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@116 (line 6184)
+  0x000001cc9918d75c: 000b ebff | 448b 5c24 | 3c4d 8bc3 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918d778: ;   {optimized virtual_call}
+  0x000001cc9918d778: 6666 90e8 
+
+  0x000001cc9918d77c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@116 (line 6184)
+  0x000001cc9918d77c: 60e5 e7ff | c5fa 1044 
+
+  0x000001cc9918d784: ;   {static_call}
+  0x000001cc9918d784: 2448 90e8 
+
+  0x000001cc9918d788: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@116 (line 6184)
+  0x000001cc9918d788: b4e0 e6ff | c5fa 1044 
+
+  0x000001cc9918d790: ;   {static_call}
+  0x000001cc9918d790: 2448 90e8 
+
+  0x000001cc9918d794: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@116 (line 6184)
+  0x000001cc9918d794: a8e4 e6ff | 4c8b 5424 | 3045 8b52 | 3447 8b44 
+
+  0x000001cc9918d7a4: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918d7a4: d408 4181 | f8a0 fa0d | 000f 8539 | 1e00 0049 | c1e2 0345 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918d7c0: ;   {static_call}
+  0x000001cc9918d7c0: 4533 c0e8 
+
+  0x000001cc9918d7c4: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@116 (line 6184)
+  0x000001cc9918d7c4: 78e8 e6ff | 4d8b 9780 
+
+  0x000001cc9918d7cc: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@119 (line 6185)
+                      ;   {poll}
+  0x000001cc9918d7cc: 0300 0041 | 8502 448b | 5c24 4447 | 8b54 dc10 | 448b 5c24 | 3845 3bda | 7414 448b | 5c24 5844 
+  0x000001cc9918d7ec: 8b44 2438 | 4489 4424 | 58e9 9dfe | ffff 4c8b | 4c24 2045 | 8b51 1c47 | 8b5c d410 | 4585 db0f 
+  0x000001cc9918d80c: 848d 0100 | 004c 894c | 2420 478b | 44d4 0c44 | 8944 2440 | 4f8d 1cd4 | 4c89 5c24 | 2844 8954 
+  0x000001cc9918d82c: 2444 41bb | ffff ffff | 4533 d244 | 8954 2458 | 448b 4424 | 4447 8b54 | c40c 443b | 5424 400f 
+  0x000001cc9918d84c: 85df 2400 | 0045 8bd0 | 478b 54d4 | 1044 8b4c | 2458 453b | ca0f 8ded | 2400 0045 | 8bd0 478b 
+  0x000001cc9918d86c: 54d4 1447 | 8b4c d40c | 8b4c 2458 | 413b c90f | 8def 2400 | 0044 8b5c | 2458 41ff | c344 895c 
+  0x000001cc9918d88c: 2438 413b | c90f 83c9 | 1b00 0049 | c1e2 0345 | 8b54 8a10 
+
+  0x000001cc9918d8a0: ; implicit exception: dispatches to 0x000001cc9919052c
+  0x000001cc9918d8a0: 478b 44d4 
+
+  0x000001cc9918d8a4: ;   {metadata('Engine/Object')}
+  0x000001cc9918d8a4: 0841 81f8 | 80f5 0201 | 0f85 1229 | 0000 49c1 | e203 4c89 | 5424 3045 | 8b52 1c47 | 8b44 d408 
+  0x000001cc9918d8c4: 4c8b 5c24 | 2045 8b5b | 7844 895c | 243c 4c8b | 5c24 2041 
+
+  0x000001cc9918d8d8: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918d8d8: 8b6b 7441 | 81f8 a0fa | 0d00 0f85 | e01c 0000 | 49c1 e203 | 458b 5a10 | 4183 fb03 | 0f8c 9624 
+  0x000001cc9918d8f8: 0000 488b 
+
+  0x000001cc9918d8fc: ;   {optimized virtual_call}
+  0x000001cc9918d8fc: 5424 30e8 
+
+  0x000001cc9918d900: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@158 (line 6187)
+  0x000001cc9918d900: 5c09 ebff | 448b 5424 | 3c4d 8bc2 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918d91c: ;   {optimized virtual_call}
+  0x000001cc9918d91c: 6666 90e8 
+
+  0x000001cc9918d920: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@158 (line 6187)
+  0x000001cc9918d920: bce3 e7ff | c5fa 1044 
+
+  0x000001cc9918d928: ;   {static_call}
+  0x000001cc9918d928: 2448 90e8 
+
+  0x000001cc9918d92c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@158 (line 6187)
+  0x000001cc9918d92c: 10df e6ff | c5fa 1044 
+
+  0x000001cc9918d934: ;   {static_call}
+  0x000001cc9918d934: 2448 90e8 
+
+  0x000001cc9918d938: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@158 (line 6187)
+  0x000001cc9918d938: 04e3 e6ff | 4c8b 5424 | 3045 8b52 | 3447 8b44 
+
+  0x000001cc9918d948: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918d948: d408 4181 | f8a0 fa0d | 000f 85c9 | 1c00 0049 | c1e2 0345 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918d964: ;   {static_call}
+  0x000001cc9918d964: 4533 c0e8 
+
+  0x000001cc9918d968: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@158 (line 6187)
+  0x000001cc9918d968: d4e6 e6ff | 4d8b 9780 
+
+  0x000001cc9918d970: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@161 (line 6188)
+                      ;   {poll}
+  0x000001cc9918d970: 0300 0041 | 8502 448b | 5424 4447 | 8b54 d410 | 448b 4424 | 3845 3bc2 | 740f 448b | 5c24 5844 
+  0x000001cc9918d990: 8944 2458 | e9a3 feff | ff4c 8b4c | 2420 458b | 4120 478b | 5cc4 1045 | 85db 0f84 | 9301 0000 
+  0x000001cc9918d9b0: 4c89 4c24 | 2047 8b54 | c40c 4489 | 5424 404f | 8d14 c44c | 8954 2428 | 4489 4424 | 4441 bbff 
+  0x000001cc9918d9d0: ffff ff45 | 33d2 4489 | 5424 5844 | 8b54 2444 | 478b 54d4 | 0c44 3b54 | 2440 0f85 | c423 0000 
+  0x000001cc9918d9f0: 448b 4424 | 4447 8b54 | c410 448b | 4424 5845 | 3bc2 0f8d | d023 0000 | 448b 4424 | 4447 8b44 
+  0x000001cc9918da10: c414 478b | 54c4 0c44 | 8b4c 2458 | 453b ca0f | 8dcf 2300 | 0041 ffc1 | 4489 4c24 | 3844 8b5c 
+  0x000001cc9918da30: 2458 453b | da0f 8339 | 1a00 004f | 8d14 c447 | 8b54 9a10 
+
+  0x000001cc9918da44: ; implicit exception: dispatches to 0x000001cc9919056c
+  0x000001cc9918da44: 478b 44d4 
+
+  0x000001cc9918da48: ;   {metadata('Engine/Object')}
+  0x000001cc9918da48: 0841 81f8 | 80f5 0201 | 0f85 5a27 | 0000 49c1 | e203 4c89 | 5424 3045 | 8b5a 1c47 | 8b54 dc08 
+  0x000001cc9918da68: 4c8b 4424 | 2045 8b48 | 7844 894c | 243c 418b 
+
+  0x000001cc9918da78: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918da78: 6874 4181 | faa0 fa0d | 000f 8579 | 1b00 004f | 8d14 dc45 | 8b5a 1041 | 83fb 030f | 8c7b 2300 
+  0x000001cc9918da98: 0048 8b54 
+
+  0x000001cc9918da9c: ;   {optimized virtual_call}
+  0x000001cc9918da9c: 2430 90e8 
+
+  0x000001cc9918daa0: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@200 (line 6190)
+  0x000001cc9918daa0: bc07 ebff | 448b 5c24 | 3c4d 8bc3 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918dabc: ;   {optimized virtual_call}
+  0x000001cc9918dabc: 6666 90e8 
+
+  0x000001cc9918dac0: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@200 (line 6190)
+  0x000001cc9918dac0: 1ce2 e7ff | c5fa 1044 
+
+  0x000001cc9918dac8: ;   {static_call}
+  0x000001cc9918dac8: 2448 90e8 
+
+  0x000001cc9918dacc: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@200 (line 6190)
+  0x000001cc9918dacc: 70dd e6ff | c5fa 1044 
+
+  0x000001cc9918dad4: ;   {static_call}
+  0x000001cc9918dad4: 2448 90e8 
+
+  0x000001cc9918dad8: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@200 (line 6190)
+  0x000001cc9918dad8: 64e1 e6ff | 4c8b 5424 | 3045 8b52 | 3447 8b44 
+
+  0x000001cc9918dae8: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918dae8: d408 4181 | f8a0 fa0d | 000f 8561 | 1b00 0049 | c1e2 0345 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918db04: ;   {static_call}
+  0x000001cc9918db04: 4533 c0e8 
+
+  0x000001cc9918db08: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@200 (line 6190)
+  0x000001cc9918db08: 34e5 e6ff | 4d8b 9780 
+
+  0x000001cc9918db10: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@203 (line 6191)
+                      ;   {poll}
+  0x000001cc9918db10: 0300 0041 | 8502 448b | 5c24 4447 | 8b54 dc10 | 448b 5c24 | 3845 3bda | 7414 448b | 5c24 5844 
+  0x000001cc9918db30: 8b44 2438 | 4489 4424 | 58e9 9dfe | ffff 4c8b | 4c24 2045 | 8b51 2447 | 8b5c d410 | 4585 db0f 
+  0x000001cc9918db50: 848d 0100 | 004c 894c | 2420 478b | 44d4 0c44 | 8944 2440 | 4f8d 1cd4 | 4c89 5c24 | 2844 8954 
+  0x000001cc9918db70: 2444 41bb | ffff ffff | 4533 d244 | 8954 2458 | 448b 4424 | 4447 8b54 | c40c 443b | 5424 400f 
+  0x000001cc9918db90: 859f 2200 | 0045 8bd0 | 478b 54d4 | 1044 8b4c | 2458 453b | ca0f 8dad | 2200 0045 | 8bd0 478b 
+  0x000001cc9918dbb0: 54d4 1447 | 8b4c d40c | 8b4c 2458 | 413b c90f | 8daf 2200 | 0044 8b5c | 2458 41ff | c344 895c 
+  0x000001cc9918dbd0: 2438 413b | c90f 83ad | 1800 0049 | c1e2 0345 | 8b54 8a10 
+
+  0x000001cc9918dbe4: ; implicit exception: dispatches to 0x000001cc991905ac
+  0x000001cc9918dbe4: 478b 44d4 
+
+  0x000001cc9918dbe8: ;   {metadata('Engine/Object')}
+  0x000001cc9918dbe8: 0841 81f8 | 80f5 0201 | 0f85 1e26 | 0000 49c1 | e203 4c89 | 5424 3045 | 8b52 1c47 | 8b44 d408 
+  0x000001cc9918dc08: 4c8b 5c24 | 2045 8b5b | 7844 895c | 243c 4c8b | 5c24 2041 
+
+  0x000001cc9918dc1c: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918dc1c: 8b6b 7441 | 81f8 a0fa | 0d00 0f85 | 081a 0000 | 49c1 e203 | 458b 5a10 | 4183 fb03 | 0f8c 5622 
+  0x000001cc9918dc3c: 0000 488b 
+
+  0x000001cc9918dc40: ;   {optimized virtual_call}
+  0x000001cc9918dc40: 5424 30e8 
+
+  0x000001cc9918dc44: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@242 (line 6193)
+  0x000001cc9918dc44: 1806 ebff | 448b 5424 | 3c4d 8bc2 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918dc60: ;   {optimized virtual_call}
+  0x000001cc9918dc60: 6666 90e8 
+
+  0x000001cc9918dc64: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@242 (line 6193)
+  0x000001cc9918dc64: 78e0 e7ff | c5fa 1044 
+
+  0x000001cc9918dc6c: ;   {static_call}
+  0x000001cc9918dc6c: 2448 90e8 
+
+  0x000001cc9918dc70: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@242 (line 6193)
+  0x000001cc9918dc70: ccdb e6ff | c5fa 1044 
+
+  0x000001cc9918dc78: ;   {static_call}
+  0x000001cc9918dc78: 2448 90e8 
+
+  0x000001cc9918dc7c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@242 (line 6193)
+  0x000001cc9918dc7c: c0df e6ff | 4c8b 5424 | 3045 8b52 | 3447 8b44 
+
+  0x000001cc9918dc8c: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918dc8c: d408 4181 | f8a0 fa0d | 000f 85d1 | 1900 0049 | c1e2 0345 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918dca8: ;   {static_call}
+  0x000001cc9918dca8: 4533 c0e8 
+
+  0x000001cc9918dcac: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@242 (line 6193)
+  0x000001cc9918dcac: 90e3 e6ff | 4d8b 9780 
+
+  0x000001cc9918dcb4: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@245 (line 6194)
+                      ;   {poll}
+  0x000001cc9918dcb4: 0300 0041 | 8502 448b | 5424 4447 | 8b54 d410 | 448b 4424 | 3845 3bc2 | 740f 448b | 5c24 5844 
+  0x000001cc9918dcd4: 8944 2458 | e9a3 feff | ff4c 8b4c | 2420 458b | 4128 478b | 5cc4 0c49 | 8b87 f800 | 0000 4c8b 
+  0x000001cc9918dcf4: d049 83c2 | 204d 3b97 | 0801 0000 | 0f83 ee15 | 0000 4489 | 5c24 2c44 | 8944 2428 | 4c89 4c24 
+  0x000001cc9918dd14: 204d 8997 | f800 0000 | 410f 0d8a | c000 0000 | 48c7 0001 | 0000 004c | 8bd0 4983 
+
+  0x000001cc9918dd30: ;   {metadata('java/util/ArrayList$Itr')}
+  0x000001cc9918dd30: c218 c740 | 08f0 f71a | 0044 8960 | 0cc5 fdef | c0c4 c179 | d602 41ba | ffff ffff | 4c89 5010 
+  0x000001cc9918dd50: 488b d844 | 8b54 2428 | 4489 5018 | 448b 5c24 | 2c44 8958 | 144c 8b54 | 2420 c5fa | 104c 2448 
+  0x000001cc9918dd70: c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 448b 
+
+  0x000001cc9918dd84: ;   {metadata('java/util/ArrayList$Itr')}
+  0x000001cc9918dd84: 4308 4181 | f8f0 f71a | 000f 8525 | 1600 004c | 8bc3 418b | 4818 458b | 5ccc 104c | 8944 2430 
+  0x000001cc9918dda4: 4c89 5424 | 2848 895c | 2420 458b | 500c 453b | d30f 846a | 0100 0045 | 8b44 cc0c | 4c8b 4c24 
+  0x000001cc9918ddc4: 3045 8b49 | 1445 3bc1 | 0f85 ee22 | 0000 453b | d30f 8d09 | 2300 0045 | 8b5c cc14 
+
+  0x000001cc9918dde0: ; implicit exception: dispatches to 0x000001cc991906bc
+  0x000001cc9918dde0: 478b 4cdc | 0c45 3bd1 | 0f8d 1a23 | 0000 4c8b | 4424 3045 | 8950 1041 | 8bca ffc1 | 4189 480c 
+  0x000001cc9918de00: 453b d10f | 839f 1900 | 0049 c1e3 | 0347 8b54 | 9310 478b 
+
+  0x000001cc9918de14: ;   {metadata('Engine/Object')}
+  0x000001cc9918de14: 5cd4 0841 | 81fb 80f5 | 0201 0f85 | 5424 0000 | 49c1 e203 | 458b 421c 
+
+  0x000001cc9918de2c: ; implicit exception: dispatches to 0x000001cc991906d8
+  0x000001cc9918de2c: 478b 5cc4 | 084c 8954 | 2438 4c8b | 5424 2845 | 8b4a 7444 | 894c 2440 | 418b 6a78 
+
+  0x000001cc9918de48: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918de48: 4181 fba0 | fa0d 000f | 856f 1900 | 004f 8d14 | c445 8b52 | 1041 83fa | 030f 8cc9 | 2200 00c5 
+  0x000001cc9918de68: fa11 5424 | 50c5 fa11 | 5c24 4cc5 | fa11 4424 | 48c5 fa11 | 4c24 4448 | 8b54 2438 
+
+  0x000001cc9918de84: ;   {optimized virtual_call}
+  0x000001cc9918de84: 6666 90e8 
+
+  0x000001cc9918de88: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@284 (line 6196)
+  0x000001cc9918de88: d403 ebff | 448b 5c24 | 404d 8bcb | 49c1 e103 | 4c8b c549 | c1e0 0348 | 8b54 2438 
+
+  0x000001cc9918dea4: ;   {optimized virtual_call}
+  0x000001cc9918dea4: 6666 90e8 
+
+  0x000001cc9918dea8: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [56]=Oop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@284 (line 6196)
+  0x000001cc9918dea8: 34de e7ff | c5fa 1044 
+
+  0x000001cc9918deb0: ;   {static_call}
+  0x000001cc9918deb0: 2444 90e8 
+
+  0x000001cc9918deb4: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [56]=Oop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@284 (line 6196)
+  0x000001cc9918deb4: 88d9 e6ff | c5fa 1044 
+
+  0x000001cc9918debc: ;   {static_call}
+  0x000001cc9918debc: 2444 90e8 
+
+  0x000001cc9918dec0: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [56]=Oop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@284 (line 6196)
+  0x000001cc9918dec0: 7cdd e6ff | 4c8b 5424 | 3845 8b52 | 3447 8b44 
+
+  0x000001cc9918ded0: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918ded0: d408 4181 | f8a0 fa0d | 000f 850d | 1900 0049 | c1e2 0345 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918deec: ;   {static_call}
+  0x000001cc9918deec: 4533 c0e8 
+
+  0x000001cc9918def0: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@284 (line 6196)
+  0x000001cc9918def0: 4ce1 e6ff | 4d8b 9780 
+
+  0x000001cc9918def8: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@287 (line 6197)
+                      ;   {poll}
+  0x000001cc9918def8: 0300 0041 | 8502 488b | 5c24 204c | 8b54 2428 | c5fa 104c | 2444 c5fa | 1044 2448 | c5fa 105c 
+  0x000001cc9918df18: 244c c5fa | 1054 2450 | e95d feff | ff4c 8b54 | 2428 458b | 4a2c 478b | 5ccc 1045 | 85db 0f84 
+  0x000001cc9918df38: d601 0000 | 4c89 5424 | 2047 8b54 | cc0c 4489 | 5424 404f | 8d14 cc4c | 8954 2428 | 4489 4c24 
+  0x000001cc9918df58: 4441 bbff | ffff ff45 | 33d2 4489 | 5424 5844 | 8b44 2444 | 478b 44c4 | 0c44 3b44 | 2440 0f85 
+  0x000001cc9918df78: c01f 0000 | 448b 5424 | 4447 8b54 | d410 448b | 4c24 5845 | 3bca 0f8d | cc1f 0000 | 448b 5424 
+  0x000001cc9918df98: 4447 8b54 | d414 478b | 4cd4 0c8b | 4c24 5841 | 3bc9 0f8d | cc1f 0000 | 448b 5c24 | 5841 ffc3 
+  0x000001cc9918dfb8: 4489 5c24 | 3841 3bc9 | 0f83 ce16 | 0000 49c1 | e203 458b | 5c8a 1047 | 8b54 dc08 
+
+  0x000001cc9918dfd4: ;   {metadata('Engine/Object')}
+  0x000001cc9918dfd4: 4181 fa80 | f502 010f | 85bb 2100 | 004f 8d14 | dc4c 8954 | 2430 458b | 521c 478b | 44d4 084c 
+  0x000001cc9918dff4: 8b5c 2420 | 458b 4b74 | 4489 4c24 | 3c41 8b6b 
+
+  0x000001cc9918e004: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e004: 7841 81f8 | a0fa 0d00 | 0f85 e216 | 0000 49c1 | e203 458b | 5210 4183 | fa03 0f8c | 781f 0000 
+  0x000001cc9918e024: c5fa 1154 | 2454 c5fa | 115c 2450 | c5fa 1144 | 244c c5fa | 114c 2448 | 488b 5424 
+
+  0x000001cc9918e040: ;   {optimized virtual_call}
+  0x000001cc9918e040: 3066 90e8 
+
+  0x000001cc9918e044: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@326 (line 6199)
+  0x000001cc9918e044: 1802 ebff | 448b 5424 | 3c4d 8bca | 49c1 e103 | 4c8b c549 | c1e0 0348 | 8b54 2430 
+
+  0x000001cc9918e060: ;   {optimized virtual_call}
+  0x000001cc9918e060: 6666 90e8 
+
+  0x000001cc9918e064: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@326 (line 6199)
+  0x000001cc9918e064: 78dc e7ff | c5fa 1044 
+
+  0x000001cc9918e06c: ;   {static_call}
+  0x000001cc9918e06c: 2448 90e8 
+
+  0x000001cc9918e070: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@326 (line 6199)
+  0x000001cc9918e070: ccd7 e6ff | c5fa 1044 
+
+  0x000001cc9918e078: ;   {static_call}
+  0x000001cc9918e078: 2448 90e8 
+
+  0x000001cc9918e07c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@326 (line 6199)
+  0x000001cc9918e07c: c0db e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918e08c: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e08c: dc08 4181 | faa0 fa0d | 000f 858d | 1600 004f | 8d14 dc45 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918e0a8: ;   {static_call}
+  0x000001cc9918e0a8: 4533 c0e8 
+
+  0x000001cc9918e0ac: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@326 (line 6199)
+  0x000001cc9918e0ac: 90df e6ff | 4d8b 9780 
+
+  0x000001cc9918e0b4: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@329 (line 6200)
+                      ;   {poll}
+  0x000001cc9918e0b4: 0300 0041 | 8502 448b | 5424 4447 | 8b5c d410 | 448b 4424 | 3845 3bc3 | 7427 448b | 5c24 5844 
+  0x000001cc9918e0d4: 8944 2458 | c5fa 104c | 2448 c5fa | 1044 244c | c5fa 105c | 2450 c5fa | 1054 2454 | e972 feff 
+  0x000001cc9918e0f4: ff4c 8b54 | 2420 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 458b 
+  0x000001cc9918e114: 4230 478b | 5cc4 1045 | 85db 0f84 | da01 0000 | 4c89 5424 | 2047 8b5c | c40c 4489 | 5c24 404f 
+  0x000001cc9918e134: 8d14 c44c | 8954 2428 | 4489 4424 | 4441 bbff | ffff ff45 | 33d2 4489 | 5424 5844 | 8b54 2444 
+  0x000001cc9918e154: 478b 44d4 | 0c44 3b44 | 2440 0f85 | 541d 0000 | 458b c247 | 8b54 c410 | 448b 4424 | 5845 3bc2 
+  0x000001cc9918e174: 0f8d 621d | 0000 448b | 4424 4447 | 8b44 c414 
+
+  0x000001cc9918e184: ; implicit exception: dispatches to 0x000001cc991905ec
+  0x000001cc9918e184: 478b 54c4 | 0c44 8b4c | 2458 453b | ca0f 8d61 | 1d00 0041 | ffc1 4489 | 4c24 3844 | 8b5c 2458 
+  0x000001cc9918e1a4: 453b da0f | 83d3 1400 | 004f 8d14 | c447 8b5c | 9a10 478b 
+
+  0x000001cc9918e1b8: ;   {metadata('Engine/Object')}
+  0x000001cc9918e1b8: 54dc 0841 | 81fa 80f5 | 0201 0f85 | 2420 0000 | 4f8d 14dc | 4c89 5424 | 3045 8b5a | 1c47 8b54 
+  0x000001cc9918e1d8: dc08 4c8b | 4424 2045 | 8b40 7844 | 8944 243c | 4c8b 4424 | 2041 8b68 
+
+  0x000001cc9918e1f0: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e1f0: 7441 81fa | a0fa 0d00 | 0f85 d214 | 0000 4f8d | 14dc 458b | 5210 4183 | fa03 0f8c | 081d 0000 
+  0x000001cc9918e210: c5fa 1154 | 2454 c5fa | 115c 2450 | c5fa 1144 | 244c c5fa | 114c 2448 | 488b 5424 
+
+  0x000001cc9918e22c: ;   {optimized virtual_call}
+  0x000001cc9918e22c: 3066 90e8 
+
+  0x000001cc9918e230: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@368 (line 6202)
+  0x000001cc9918e230: 2c00 ebff | 448b 5c24 | 3c4d 8bc3 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918e24c: ;   {optimized virtual_call}
+  0x000001cc9918e24c: 6666 90e8 
+
+  0x000001cc9918e250: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@368 (line 6202)
+  0x000001cc9918e250: 8cda e7ff | c5fa 1044 
+
+  0x000001cc9918e258: ;   {static_call}
+  0x000001cc9918e258: 2448 90e8 
+
+  0x000001cc9918e25c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@368 (line 6202)
+  0x000001cc9918e25c: e0d5 e6ff | c5fa 1044 
+
+  0x000001cc9918e264: ;   {static_call}
+  0x000001cc9918e264: 2448 90e8 
+
+  0x000001cc9918e268: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@368 (line 6202)
+  0x000001cc9918e268: d4d9 e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918e278: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e278: dc08 4181 | faa0 fa0d | 000f 858d | 1400 004f | 8d14 dc45 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918e294: ;   {static_call}
+  0x000001cc9918e294: 4533 c0e8 
+
+  0x000001cc9918e298: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@368 (line 6202)
+  0x000001cc9918e298: a4dd e6ff | 4d8b 9780 
+
+  0x000001cc9918e2a0: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@371 (line 6203)
+                      ;   {poll}
+  0x000001cc9918e2a0: 0300 0041 | 8502 448b | 5c24 4447 | 8b5c dc10 | 448b 5424 | 3845 3bd3 | 7427 448b | 5c24 5844 
+  0x000001cc9918e2c0: 8954 2458 | c5fa 104c | 2448 c5fa | 1044 244c | c5fa 105c | 2450 c5fa | 1054 2454 | e96e feff 
+  0x000001cc9918e2e0: ff4c 8b54 | 2420 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 458b 
+  0x000001cc9918e300: 4a34 478b | 5ccc 1045 | 85db 0f84 | d601 0000 | 4c89 5424 | 2047 8b54 | cc0c 4489 | 5424 404f 
+  0x000001cc9918e320: 8d14 cc4c | 8954 2428 | 4489 4c24 | 4441 bbff | ffff ff45 | 33d2 4489 | 5424 5844 | 8b44 2444 
+  0x000001cc9918e340: 478b 44c4 | 0c44 3b44 | 2440 0f85 | 6c1c 0000 | 448b 5424 | 4447 8b54 | d410 448b | 4c24 5845 
+  0x000001cc9918e360: 3bca 0f8d | 781c 0000 | 448b 5424 | 4447 8b54 | d414 478b | 4cd4 0c8b | 4c24 5841 | 3bc9 0f8d 
+  0x000001cc9918e380: 781c 0000 | 448b 5c24 | 5841 ffc3 | 4489 5c24 | 3841 3bc9 | 0f83 0e13 | 0000 49c1 | e203 458b 
+  0x000001cc9918e3a0: 5c8a 1047 | 8b54 dc08 
+
+  0x000001cc9918e3a8: ;   {metadata('Engine/Object')}
+  0x000001cc9918e3a8: 4181 fa80 | f502 010f | 8587 1e00 | 004f 8d14 | dc4c 8954 | 2430 458b | 521c 478b | 44d4 084c 
+  0x000001cc9918e3c8: 8b5c 2420 | 458b 4b78 | 4489 4c24 | 3c41 8b6b 
+
+  0x000001cc9918e3d8: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e3d8: 7441 81f8 | a0fa 0d00 | 0f85 5613 | 0000 49c1 | e203 458b | 5210 4183 | fa03 0f8c | 241c 0000 
+  0x000001cc9918e3f8: c5fa 1154 | 2454 c5fa | 115c 2450 | c5fa 1144 | 244c c5fa | 114c 2448 | 488b 5424 
+
+  0x000001cc9918e414: ;   {optimized virtual_call}
+  0x000001cc9918e414: 3066 90e8 
+
+  0x000001cc9918e418: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@32 (line 288)
+                      ; - org.example.Main::loop@410 (line 6205)
+  0x000001cc9918e418: 44fe eaff | 448b 5424 | 3c4d 8bc2 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918e434: ;   {optimized virtual_call}
+  0x000001cc9918e434: 6666 90e8 
+
+  0x000001cc9918e438: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@38 (line 289)
+                      ; - org.example.Main::loop@410 (line 6205)
+  0x000001cc9918e438: a4d8 e7ff | c5fa 1044 
+
+  0x000001cc9918e440: ;   {static_call}
+  0x000001cc9918e440: 2448 90e8 
+
+  0x000001cc9918e444: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurve@44 (line 290)
+                      ; - org.example.Main::loop@410 (line 6205)
+  0x000001cc9918e444: f8d3 e6ff | c5fa 1044 
+
+  0x000001cc9918e44c: ;   {static_call}
+  0x000001cc9918e44c: 2448 90e8 
+
+  0x000001cc9918e450: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurve@50 (line 291)
+                      ; - org.example.Main::loop@410 (line 6205)
+  0x000001cc9918e450: ecd7 e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918e460: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e460: dc08 4181 | faa0 fa0d | 000f 8511 | 1300 004f | 8d14 dc45 | 8b4a 10ba | 0900 0000 
+
+  0x000001cc9918e47c: ;   {static_call}
+  0x000001cc9918e47c: 4533 c0e8 
+
+  0x000001cc9918e480: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurve@65 (line 292)
+                      ; - org.example.Main::loop@410 (line 6205)
+  0x000001cc9918e480: bcdb e6ff | 4d8b 9780 
+
+  0x000001cc9918e488: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@413 (line 6206)
+                      ;   {poll}
+  0x000001cc9918e488: 0300 0041 | 8502 448b | 5424 4447 | 8b5c d410 | 448b 4424 | 3845 3bc3 | 7427 448b | 5c24 5844 
+  0x000001cc9918e4a8: 8944 2458 | c5fa 104c | 2448 c5fa | 1044 244c | c5fa 105c | 2450 c5fa | 1054 2454 | e972 feff 
+  0x000001cc9918e4c8: ff4c 8b54 | 2420 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 458b 
+  0x000001cc9918e4e8: 5a38 478b | 4cdc 1045 | 85c9 0f85 | 6813 0000 | 458b 423c 
+
+  0x000001cc9918e4fc: ; implicit exception: dispatches to 0x000001cc99190304
+  0x000001cc9918e4fc: 478b 5cc4 | 1045 85db | 0f85 8213 | 0000 458b | 5a40 478b | 4cdc 1045 | 85c9 0f85 | 9813 0000 
+  0x000001cc9918e51c: 458b 4244 
+
+  0x000001cc9918e520: ; implicit exception: dispatches to 0x000001cc9919031c
+  0x000001cc9918e520: 478b 5cc4 | 1045 85db | 0f85 b213 | 0000 458b | 5a48 478b | 4cdc 1045 | 85c9 0f85 | c813 0000 
+  0x000001cc9918e540: 458b 424c 
+
+  0x000001cc9918e544: ; implicit exception: dispatches to 0x000001cc99190334
+  0x000001cc9918e544: 478b 5cc4 | 1045 85db | 0f85 e213 | 0000 458b | 5a50 478b | 4cdc 1045 | 85c9 0f85 | f813 0000 
+  0x000001cc9918e564: 458b 4254 
+
+  0x000001cc9918e568: ; implicit exception: dispatches to 0x000001cc9919034c
+  0x000001cc9918e568: 478b 5cc4 | 1045 85db | 0f85 1214 | 0000 458b | 4258 478b | 5cc4 1045 | 85db 0f84 | da01 0000 
+  0x000001cc9918e588: 4c89 5424 | 2047 8b5c | c40c 4489 | 5c24 404f | 8d14 c44c | 8954 2428 | 4489 4424 | 4441 bbff 
+  0x000001cc9918e5a8: ffff ff45 | 33d2 4489 | 5424 5844 | 8b54 2444 | 478b 44d4 | 0c44 3b44 | 2440 0f85 | 741a 0000 
+  0x000001cc9918e5c8: 458b c247 | 8b54 c410 | 448b 4424 | 5845 3bc2 | 0f8d 821a | 0000 448b | 4424 4447 | 8b44 c414 
+  0x000001cc9918e5e8: ; implicit exception: dispatches to 0x000001cc9919067c
+  0x000001cc9918e5e8: 478b 54c4 | 0c44 8b4c | 2458 453b | ca0f 8d81 | 1a00 0041 | ffc1 4489 | 4c24 3844 | 8b5c 2458 
+  0x000001cc9918e608: 453b da0f | 83ab 1000 | 004f 8d14 | c447 8b5c | 9a10 478b 
+
+  0x000001cc9918e61c: ;   {metadata('Engine/Object')}
+  0x000001cc9918e61c: 54dc 0841 | 81fa 80f5 | 0201 0f85 | ac1b 0000 | 4f8d 14dc | 4c89 5424 | 3045 8b5a | 1c47 8b54 
+  0x000001cc9918e63c: dc08 4c8b | 4424 2045 | 8b40 7844 | 8944 243c | 4c8b 4424 | 2041 8b68 
+
+  0x000001cc9918e654: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e654: 7441 81fa | a0fa 0d00 | 0f85 fa10 | 0000 4f8d | 14dc 458b | 5210 4183 | fa03 0f8c | 281a 0000 
+  0x000001cc9918e674: c5fa 1154 | 2454 c5fa | 115c 2450 | c5fa 1144 | 244c c5fa | 114c 2448 | 488b 5424 
+
+  0x000001cc9918e690: ;   {optimized virtual_call}
+  0x000001cc9918e690: 3066 90e8 
+
+  0x000001cc9918e694: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@32 (line 300)
+                      ; - org.example.Main::loop@788 (line 6234)
+  0x000001cc9918e694: c8fb eaff | 448b 5c24 | 3c4d 8bc3 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918e6b0: ;   {optimized virtual_call}
+  0x000001cc9918e6b0: 6666 90e8 
+
+  0x000001cc9918e6b4: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@38 (line 301)
+                      ; - org.example.Main::loop@788 (line 6234)
+  0x000001cc9918e6b4: 28d6 e7ff | c5fa 1044 
+
+  0x000001cc9918e6bc: ;   {static_call}
+  0x000001cc9918e6bc: 2448 90e8 
+
+  0x000001cc9918e6c0: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurveForLineStrip@44 (line 302)
+                      ; - org.example.Main::loop@788 (line 6234)
+  0x000001cc9918e6c0: 7cd1 e6ff | c5fa 1044 
+
+  0x000001cc9918e6c8: ;   {static_call}
+  0x000001cc9918e6c8: 2448 90e8 
+
+  0x000001cc9918e6cc: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurveForLineStrip@50 (line 303)
+                      ; - org.example.Main::loop@788 (line 6234)
+  0x000001cc9918e6cc: 70d5 e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918e6dc: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e6dc: dc08 4181 | faa0 fa0d | 000f 85a9 | 1000 004f | 8d14 dc45 | 8b4a 10ba | 0300 0000 
+
+  0x000001cc9918e6f8: ;   {static_call}
+  0x000001cc9918e6f8: 4533 c0e8 
+
+  0x000001cc9918e6fc: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurveForLineStrip@64 (line 304)
+                      ; - org.example.Main::loop@788 (line 6234)
+  0x000001cc9918e6fc: 40d9 e6ff | 4d8b 9780 
+
+  0x000001cc9918e704: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@791 (line 6235)
+                      ;   {poll}
+  0x000001cc9918e704: 0300 0041 | 8502 448b | 5c24 4447 | 8b5c dc10 | 448b 5424 | 3845 3bd3 | 7427 448b | 5c24 5844 
+  0x000001cc9918e724: 8954 2458 | c5fa 104c | 2448 c5fa | 1044 244c | c5fa 105c | 2450 c5fa | 1054 2454 | e96e feff 
+  0x000001cc9918e744: ff4c 8b54 | 2420 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 458b 
+  0x000001cc9918e764: 4a5c 478b | 5ccc 1045 | 85db 0f84 | d601 0000 | 4c89 5424 | 2047 8b54 | cc0c 4489 | 5424 404f 
+  0x000001cc9918e784: 8d14 cc4c | 8954 2428 | 4489 4c24 | 4441 bbff | ffff ff45 | 33d2 4489 | 5424 5844 | 8b44 2444 
+  0x000001cc9918e7a4: 478b 44c4 | 0c44 3b44 | 2440 0f85 | 7c12 0000 | 448b 5424 | 4447 8b54 | d410 448b | 4c24 5845 
+  0x000001cc9918e7c4: 3bca 0f8d | 8812 0000 | 448b 5424 | 4447 8b54 | d414 478b | 4cd4 0c8b | 4c24 5841 | 3bc9 0f8d 
+  0x000001cc9918e7e4: 8812 0000 | 448b 5c24 | 5841 ffc3 | 4489 5c24 | 3841 3bc9 | 0f83 f20b | 0000 49c1 | e203 458b 
+  0x000001cc9918e804: 5c8a 1047 | 8b54 dc08 
+
+  0x000001cc9918e80c: ;   {metadata('Engine/Object')}
+  0x000001cc9918e80c: 4181 fa80 | f502 010f | 8537 1a00 | 004f 8d14 | dc4c 8954 | 2430 458b | 521c 478b | 44d4 084c 
+  0x000001cc9918e82c: 8b5c 2420 | 458b 4b78 | 4489 4c24 | 3c41 8b6b 
+
+  0x000001cc9918e83c: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e83c: 7441 81f8 | a0fa 0d00 | 0f85 720c | 0000 49c1 | e203 458b | 5210 4183 | fa03 0f8c | 3412 0000 
+  0x000001cc9918e85c: c5fa 1154 | 2454 c5fa | 115c 2450 | c5fa 1144 | 244c c5fa | 114c 2448 | 488b 5424 
+
+  0x000001cc9918e878: ;   {optimized virtual_call}
+  0x000001cc9918e878: 3066 90e8 
+
+  0x000001cc9918e87c: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@32 (line 300)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918e87c: e0f9 eaff | 448b 5424 | 3c4d 8bc2 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918e898: ;   {optimized virtual_call}
+  0x000001cc9918e898: 6666 90e8 
+
+  0x000001cc9918e89c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@38 (line 301)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918e89c: 40d4 e7ff | c5fa 1044 
+
+  0x000001cc9918e8a4: ;   {static_call}
+  0x000001cc9918e8a4: 2448 90e8 
+
+  0x000001cc9918e8a8: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurveForLineStrip@44 (line 302)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918e8a8: 94cf e6ff | c5fa 1044 
+
+  0x000001cc9918e8b0: ;   {static_call}
+  0x000001cc9918e8b0: 2448 90e8 
+
+  0x000001cc9918e8b4: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurveForLineStrip@50 (line 303)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918e8b4: 88d3 e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918e8c4: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918e8c4: dc08 4181 | faa0 fa0d | 000f 8541 | 0c00 004f | 8d14 dc45 | 8b4a 10ba | 0300 0000 
+
+  0x000001cc9918e8e0: ;   {static_call}
+  0x000001cc9918e8e0: 4533 c0e8 
+
+  0x000001cc9918e8e4: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurveForLineStrip@64 (line 304)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918e8e4: 58d7 e6ff | 4d8b 9780 
+
+  0x000001cc9918e8ec: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@833 (line 6238)
+                      ;   {poll}
+  0x000001cc9918e8ec: 0300 0041 | 8502 448b | 5424 4447 | 8b5c d410 | 448b 4424 | 3845 3bc3 | 7427 448b | 5c24 5844 
+  0x000001cc9918e90c: 8944 2458 | c5fa 104c | 2448 c5fa | 1044 244c | c5fa 105c | 2450 c5fa | 1054 2454 | e972 feff 
+  0x000001cc9918e92c: ff4c 8b54 | 2420 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 458b 
+  0x000001cc9918e94c: 4260 478b | 5cc4 1045 | 85db 0f84 | da01 0000 | 4c89 5424 | 2047 8b5c | c40c 4489 | 5c24 404f 
+  0x000001cc9918e96c: 8d14 c44c | 8954 2428 | 4489 4424 | 4441 bbff | ffff ff45 | 33d2 4489 | 5424 5844 | 8b54 2444 
+  0x000001cc9918e98c: 478b 44d4 | 0c44 3b44 | 2440 0f85 | 1411 0000 | 458b c247 | 8b54 c410 | 448b 4424 | 5845 3bc2 
+  0x000001cc9918e9ac: 0f8d 2211 | 0000 448b | 4424 4447 | 8b44 c414 
+
+  0x000001cc9918e9bc: ; implicit exception: dispatches to 0x000001cc991903d8
+  0x000001cc9918e9bc: 478b 54c4 | 0c44 8b4c | 2458 453b | ca0f 8d21 | 1100 0041 | ffc1 4489 | 4c24 3844 | 8b5c 2458 
+  0x000001cc9918e9dc: 453b da0f | 831f 0a00 | 004f 8d14 | c447 8b5c | 9a10 478b 
+
+  0x000001cc9918e9f0: ;   {metadata('Engine/Object')}
+  0x000001cc9918e9f0: 54dc 0841 | 81fa 80f5 | 0201 0f85 | 8817 0000 | 4f8d 14dc | 4c89 5424 | 3045 8b5a | 1c47 8b54 
+  0x000001cc9918ea10: dc08 4c8b | 4424 2045 | 8b40 7844 | 8944 243c | 4c8b 4424 | 2041 8b68 
+
+  0x000001cc9918ea28: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918ea28: 7441 81fa | a0fa 0d00 | 0f85 ba0a | 0000 4f8d | 14dc 458b | 5210 4183 | fa03 0f8c | c810 0000 
+  0x000001cc9918ea48: c5fa 1154 | 2454 c5fa | 115c 2450 | c5fa 1144 | 244c c5fa | 114c 2448 | 488b 5424 
+
+  0x000001cc9918ea64: ;   {optimized virtual_call}
+  0x000001cc9918ea64: 3066 90e8 
+
+  0x000001cc9918ea68: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@32 (line 300)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918ea68: f4f7 eaff | 448b 5c24 | 3c4d 8bc3 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918ea84: ;   {optimized virtual_call}
+  0x000001cc9918ea84: 6666 90e8 
+
+  0x000001cc9918ea88: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@38 (line 301)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918ea88: 54d2 e7ff | c5fa 1044 
+
+  0x000001cc9918ea90: ;   {static_call}
+  0x000001cc9918ea90: 2448 90e8 
+
+  0x000001cc9918ea94: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurveForLineStrip@44 (line 302)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918ea94: a8cd e6ff | c5fa 1044 
+
+  0x000001cc9918ea9c: ;   {static_call}
+  0x000001cc9918ea9c: 2448 90e8 
+
+  0x000001cc9918eaa0: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurveForLineStrip@50 (line 303)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918eaa0: 9cd1 e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918eab0: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918eab0: dc08 4181 | faa0 fa0d | 000f 8569 | 0a00 004f | 8d14 dc45 | 8b4a 10ba | 0300 0000 
+
+  0x000001cc9918eacc: ;   {static_call}
+  0x000001cc9918eacc: 4533 c0e8 
+
+  0x000001cc9918ead0: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurveForLineStrip@64 (line 304)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918ead0: 6cd5 e6ff | 4d8b 9780 
+
+  0x000001cc9918ead8: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@875 (line 6245)
+                      ;   {poll}
+  0x000001cc9918ead8: 0300 0041 | 8502 448b | 5c24 4447 | 8b5c dc10 | 448b 5424 | 3845 3bd3 | 7427 448b | 5c24 5844 
+  0x000001cc9918eaf8: 8954 2458 | c5fa 104c | 2448 c5fa | 1044 244c | c5fa 105c | 2450 c5fa | 1054 2454 | e96e feff 
+  0x000001cc9918eb18: ff4c 8b54 | 2420 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 458b 
+  0x000001cc9918eb38: 4a64 478b | 5ccc 1045 | 85db 0f84 | b301 0000 | 4c89 5424 | 2047 8b54 | cc0c 4489 | 5424 404f 
+  0x000001cc9918eb58: 8d14 cc4c | 8954 2428 | 4489 4c24 | 4441 bbff | ffff ff45 | 33d2 4489 | 5424 5844 | 8b44 2444 
+  0x000001cc9918eb78: 478b 44c4 | 0c44 3b44 | 2440 0f85 | 280e 0000 | 448b 5424 | 4447 8b54 | d410 448b | 4c24 5845 
+  0x000001cc9918eb98: 3bca 0f8d | 340e 0000 | 448b 5424 | 4447 8b54 | d414 478b | 4cd4 0c8b | 4c24 5841 | 3bc9 0f8d 
+  0x000001cc9918ebb8: 340e 0000 | 448b 5c24 | 5841 ffc3 | 4489 5c24 | 3841 3bc9 | 0f83 0908 | 0000 49c1 | e203 458b 
+  0x000001cc9918ebd8: 5c8a 1047 | 8b54 dc08 
+
+  0x000001cc9918ebe0: ;   {metadata('Engine/Object')}
+  0x000001cc9918ebe0: 4181 fa80 | f502 010f | 853b 1600 | 004f 8d14 | dc4c 8954 | 2430 458b | 521c 478b | 44d4 084c 
+  0x000001cc9918ec00: 8b5c 2420 | 458b 4b78 | 4489 4c24 | 3c41 8b6b 
+
+  0x000001cc9918ec10: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918ec10: 7441 81f8 | a0fa 0d00 | 0f85 7e08 | 0000 49c1 | e203 458b | 5210 4183 | fa03 0f8c | e00d 0000 
+  0x000001cc9918ec30: c5fa 1154 | 2454 c5fa | 115c 2450 | c5fa 1144 | 244c c5fa | 114c 2448 | 488b 5424 
+
+  0x000001cc9918ec4c: ;   {optimized virtual_call}
+  0x000001cc9918ec4c: 3066 90e8 
+
+  0x000001cc9918ec50: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@32 (line 300)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918ec50: 0cf6 eaff | 448b 5424 | 3c4d 8bc2 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918ec6c: ;   {optimized virtual_call}
+  0x000001cc9918ec6c: 6666 90e8 
+
+  0x000001cc9918ec70: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@38 (line 301)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918ec70: 6cd0 e7ff | c5fa 1044 
+
+  0x000001cc9918ec78: ;   {static_call}
+  0x000001cc9918ec78: 2448 90e8 
+
+  0x000001cc9918ec7c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurveForLineStrip@44 (line 302)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918ec7c: c0cb e6ff | c5fa 1044 
+
+  0x000001cc9918ec84: ;   {static_call}
+  0x000001cc9918ec84: 2448 90e8 
+
+  0x000001cc9918ec88: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurveForLineStrip@50 (line 303)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918ec88: b4cf e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918ec98: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918ec98: dc08 4181 | faa0 fa0d | 000f 8535 | 0800 004f | 8d14 dc45 | 8b4a 10ba | 0300 0000 
+
+  0x000001cc9918ecb4: ;   {static_call}
+  0x000001cc9918ecb4: 4533 c0e8 
+
+  0x000001cc9918ecb8: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurveForLineStrip@64 (line 304)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918ecb8: 84d3 e6ff | 4d8b 9780 
+
+  0x000001cc9918ecc0: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@917 (line 6248)
+                      ;   {poll}
+  0x000001cc9918ecc0: 0300 0041 | 8502 448b | 5424 4447 | 8b5c d410 | 448b 4424 | 3845 3bc3 | 0f85 82e8 | ffff 4c8b 
+  0x000001cc9918ece0: 5424 20c5 | fa10 4c24 | 48c5 fa10 | 4424 4cc5 | fa10 5c24 | 50c5 fa10 | 5424 5445 | 8b42 6847 
+  0x000001cc9918ed00: 8b5c c410 | 4585 db0f | 84d9 0100 | 004c 8954 | 2420 478b | 5cc4 0c44 | 895c 2440 | 4f8d 14c4 
+  0x000001cc9918ed20: 4c89 5424 | 2844 8944 | 2444 41bb | ffff ffff | 4533 d244 | 8954 2458 | 448b 5424 | 4447 8b44 
+  0x000001cc9918ed40: d40c 443b | 4424 400f | 85e7 0d00 | 0045 8bc2 | 478b 54c4 | 1044 8b44 | 2458 453b | c20f 8df5 
+  0x000001cc9918ed60: 0d00 0044 | 8b44 2444 | 478b 44c4 | 1447 8b54 | c40c 448b | 4c24 5845 | 3bca 0f8d | f40d 0000 
+  0x000001cc9918ed80: 41ff c144 | 894c 2438 | 448b 5c24 | 5845 3bda | 0f83 8206 | 0000 4f8d | 14c4 478b | 5c9a 1047 
+  0x000001cc9918eda0: 8b54 dc08 
+
+  0x000001cc9918eda4: ;   {metadata('Engine/Object')}
+  0x000001cc9918eda4: 4181 fa80 | f502 010f | 85b3 1400 | 004f 8d14 | dc4c 8954 | 2430 458b | 5a1c 478b | 54dc 084c 
+  0x000001cc9918edc4: 8b44 2420 | 458b 4078 | 4489 4424 | 3c4c 8b44 | 2420 418b 
+
+  0x000001cc9918edd8: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918edd8: 6874 4181 | faa0 fa0d | 000f 8555 | 0700 004f | 8d14 dc45 | 8b52 1041 | 83fa 030f | 8c9b 0d00 
+  0x000001cc9918edf8: 00c5 fa11 | 5424 54c5 | fa11 5c24 | 50c5 fa11 | 4424 4cc5 | fa11 4c24 | 4848 8b54 
+
+  0x000001cc9918ee14: ;   {optimized virtual_call}
+  0x000001cc9918ee14: 2430 90e8 
+
+  0x000001cc9918ee18: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@32 (line 300)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918ee18: 44f4 eaff | 448b 5c24 | 3c4d 8bc3 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918ee34: ;   {optimized virtual_call}
+  0x000001cc9918ee34: 6666 90e8 
+
+  0x000001cc9918ee38: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@38 (line 301)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918ee38: a4ce e7ff | c5fa 1044 
+
+  0x000001cc9918ee40: ;   {static_call}
+  0x000001cc9918ee40: 2448 90e8 
+
+  0x000001cc9918ee44: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurveForLineStrip@44 (line 302)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918ee44: f8c9 e6ff | c5fa 1044 
+
+  0x000001cc9918ee4c: ;   {static_call}
+  0x000001cc9918ee4c: 2448 90e8 
+
+  0x000001cc9918ee50: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurveForLineStrip@50 (line 303)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918ee50: eccd e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918ee60: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918ee60: dc08 4181 | faa0 fa0d | 000f 8511 | 0700 004f | 8d14 dc45 | 8b4a 10ba | 0300 0000 
+
+  0x000001cc9918ee7c: ;   {static_call}
+  0x000001cc9918ee7c: 4533 c0e8 
+
+  0x000001cc9918ee80: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurveForLineStrip@64 (line 304)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918ee80: bcd1 e6ff | 4d8b 9780 
+
+  0x000001cc9918ee88: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@959 (line 6251)
+                      ;   {poll}
+  0x000001cc9918ee88: 0300 0041 | 8502 448b | 5c24 4447 | 8b5c dc10 | 448b 5424 | 3845 3bd3 | 7427 448b | 5c24 5844 
+  0x000001cc9918eea8: 8954 2458 | c5fa 104c | 2448 c5fa | 1044 244c | c5fa 105c | 2450 c5fa | 1054 2454 | e96f feff 
+  0x000001cc9918eec8: ff4c 8b54 | 2420 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 | c5fa 1054 | 2454 458b 
+  0x000001cc9918eee8: 4a6c 478b | 5ccc 1045 | 85db 0f85 | fe01 0000 | c5fa 114c | 2448 c5fa | 1144 244c | c5fa 115c 
+  0x000001cc9918ef08: 2450 c5fa | 1154 2454 | 498b ea33 
+
+  0x000001cc9918ef14: ;   {static_call}
+  0x000001cc9918ef14: d266 90e8 
+
+  0x000001cc9918ef18: ; ImmutableOopMap {rbp=Oop }
+                      ;*invokestatic glDisableVertexAttribArray {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL20::glDisableVertexAttribArray@1 (line 1948)
+                      ; - org.example.Main::loop@1005 (line 6258)
+  0x000001cc9918ef18: a4a3 e9ff | 48ba 7073 | 9db5 fc7f 
+
+  0x000001cc9918ef24: ;   {static_call}
+  0x000001cc9918ef24: 0000 90e8 
+
+  0x000001cc9918ef28: ; ImmutableOopMap {rbp=Oop }
+                      ;*invokestatic invokeV {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.glfw.GLFW::glfwPollEvents@5 (line 3403)
+                      ; - org.example.Main::loop@1008 (line 6263)
+  0x000001cc9918ef28: 948f e9ff | 4c8b dd45 | 8b43 1047 | 0fb6 54c4 | 1c45 85d2 | 0f84 f60c | 0000 4b8b | 54c4 1048 
+  0x000001cc9918ef48: 85d2 0f84 | f80c 0000 | 4c89 5c24 | 204b 8d2c | c444 8944 | 2428 49b8 | 201d 9db5 | fc7f 0000 
+  0x000001cc9918ef68: ;   {static_call}
+  0x000001cc9918ef68: 6666 90e8 
+
+  0x000001cc9918ef6c: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*invokestatic invokePV {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.glfw.GLFW::glfwSwapBuffers@17 (line 4901)
+                      ; - Engine.Window::update@4 (line 114)
+                      ; - org.example.Main::loop@14 (line 6173)
+  0x000001cc9918ef6c: 5057 e5ff | ba00 4100 
+
+  0x000001cc9918ef74: ;   {static_call}
+  0x000001cc9918ef74: 0066 90e8 
+
+  0x000001cc9918ef78: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*invokestatic glClear {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glClear@1 (line 992)
+                      ; - Engine.Window::update@10 (line 115)
+                      ; - org.example.Main::loop@14 (line 6173)
+  0x000001cc9918ef78: 4493 e9ff | 448b 5c24 | 2843 8b7c | dc18 478b | 4cdc 0c33 | d245 33c0 
+
+  0x000001cc9918ef90: ;   {static_call}
+  0x000001cc9918ef90: 6666 90e8 
+
+  0x000001cc9918ef94: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*invokestatic glViewport {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glViewport@4 (line 7968)
+                      ; - Engine.Window::update@23 (line 116)
+                      ; - org.example.Main::loop@14 (line 6173)
+  0x000001cc9918ef94: 2897 e9ff | 448b 5424 | 284b 8b54 | d410 4885 | d20f 84cd | 0c00 0049 | b860 7e9d | b5fc 7f00 
+  0x000001cc9918efb4: ;   {static_call}
+  0x000001cc9918efb4: 0066 90e8 
+
+  0x000001cc9918efb8: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*invokestatic invokePI {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.glfw.GLFW::glfwWindowShouldClose@17 (line 2246)
+                      ; - Engine.Window::update@30 (line 118)
+                      ; - org.example.Main::loop@14 (line 6173)
+  0x000001cc9918efb8: 049b e9ff | 85c0 0f85 | d80c 0000 | 448b 5c24 | 2847 8b54 | dc24 478b | 44d4 1445 | 85c0 0f84 
+  0x000001cc9918efd8: 6404 0000 | 4789 64c4 | 1047 8b4c | d41c 4789 | 64c4 0cc4 | 817a 1044 
+
+  0x000001cc9918eff0: ;   {section_word}
+  0x000001cc9918eff0: cc0c c5f8 | 2e05 86e4 | ffff 0f86 | 0008 0000 | c481 7a10 
+
+  0x000001cc9918f004: ;   {section_word}
+  0x000001cc9918f004: 4ccc 10c5 | f82e 0d71 | e4ff ff0f | 861b 0800 | 0047 0fb6 | 5cd4 0c43 | 8b4c d410 | 4585 db74 
+  0x000001cc9918f024: 3ec4 c17a | 105c cc0c | c4c1 7a10 | 54cc 10c5 
+
+  0x000001cc9918f034: ;   {section_word}
+  0x000001cc9918f034: e25c d8c5 | f82e 1d41 | e4ff ff0f | 8a72 0200 | 000f 856c | 0200 00c5 
+
+  0x000001cc9918f04c: ;   {section_word}
+  0x000001cc9918f04c: ea5c c9c5 | f82e 0d29 | e4ff ff0f | 8af3 e4ff | ff0f 85ed | e4ff ffc4 | c17a 1044 | cc0c c481 
+  0x000001cc9918f06c: 7a11 44cc | 0cc4 c17a | 104c cc10 | c481 7a11 | 4ccc 10c5 | fa10 4424 | 54c5 fa10 | 4c24 50c5 
+  0x000001cc9918f08c: fa10 5424 | 4cc5 e057 
+
+  0x000001cc9918f094: ;   {static_call}
+  0x000001cc9918f094: db66 90e8 
+
+  0x000001cc9918f098: ; ImmutableOopMap {[32]=Oop }
+                      ;*invokestatic glClearColor {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glClearColor@4 (line 1022)
+                      ; - org.example.Main::loop@27 (line 6174)
+  0x000001cc9918f098: 249e e9ff | 33d2 4533 
+
+  0x000001cc9918f0a0: ;   {static_call}
+  0x000001cc9918f0a0: c066 90e8 
+
+  0x000001cc9918f0a4: ; ImmutableOopMap {[32]=Oop }
+                      ;*invokestatic createCapabilities {reexecute=0 rethrow=0 return_oop=1}
+                      ; - org.lwjgl.opengl.GL::createCapabilities@2 (line 314)
+                      ; - org.lwjgl.opengl.GL::createCapabilities@1 (line 298)
+                      ; - org.example.Main::loop@30 (line 6175)
+  0x000001cc9918f0a4: 58ab e9ff | 488b 5424 
+
+  0x000001cc9918f0ac: ;   {optimized virtual_call}
+  0x000001cc9918f0ac: 2066 90e8 
+
+  0x000001cc9918f0b0: ; ImmutableOopMap {[32]=Oop }
+                      ;*invokevirtual input {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.example.Main::loop@35 (line 6176)
+  0x000001cc9918f0b0: 021c 0000 | 4c8b 4c24 | 2045 8b41 | 1447 8b54 | c410 4585 | d20f 848f | e5ff ff47 | 8b54 c40c 
+  0x000001cc9918f0d0: 4489 5424 | 384f 8d14 | c44c 8954 | 2428 4489 | 4424 3c41 | bbff ffff | ff45 33d2 | 4489 5424 
+  0x000001cc9918f0f0: 30e9 a3e4 | ffff 4c89 | 5424 2047 | 8b54 cc0c | 4489 5424 | 404f 8d14 | cc4c 8954 | 2428 4489 
+  0x000001cc9918f110: 4c24 4441 | baff ffff | ff45 33db | 4489 5c24 | 5844 8b44 | 2444 478b | 44c4 0c44 | 3b44 2440 
+  0x000001cc9918f130: 0f85 820a | 0000 448b | 5c24 4447 | 8b5c dc10 | 448b 4c24 | 5845 3bcb | 0f8d 8e0a | 0000 448b 
+  0x000001cc9918f150: 5c24 4447 | 8b5c dc14 
+
+  0x000001cc9918f158: ; implicit exception: dispatches to 0x000001cc99190464
+  0x000001cc9918f158: 478b 4cdc | 0c8b 4c24 | 5841 3bc9 | 0f8d 8e0a | 0000 448b | 5424 5841 | ffc2 4489 | 5424 3841 
+  0x000001cc9918f178: 3bc9 0f83 | ac02 0000 | 4f8d 14dc | 458b 5c8a | 1047 8b54 
+
+  0x000001cc9918f18c: ;   {metadata('Engine/Object')}
+  0x000001cc9918f18c: dc08 4181 | fa80 f502 | 010f 85d9 | 0f00 004f | 8d14 dc4c | 8954 2430 | 458b 521c 
+
+  0x000001cc9918f1a8: ; implicit exception: dispatches to 0x000001cc99190480
+  0x000001cc9918f1a8: 478b 44d4 | 084c 8b5c | 2420 458b | 4b78 4489 | 4c24 3c41 
+
+  0x000001cc9918f1bc: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918f1bc: 8b6b 7441 | 81f8 a0fa | 0d00 0f85 | 9403 0000 | 49c1 e203 | 458b 5210 | 4183 fa03 | 0f8c 3a0a 
+  0x000001cc9918f1dc: 0000 c5fa | 1154 2454 | c5fa 115c | 2450 c5fa | 1144 244c | c5fa 114c | 2448 488b 
+
+  0x000001cc9918f1f8: ;   {optimized virtual_call}
+  0x000001cc9918f1f8: 5424 30e8 
+
+  0x000001cc9918f1fc: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [68]=NarrowOop }
+                      ;*invokevirtual setupVAOVBOCurve {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@32 (line 300)
+                      ; - org.example.Main::loop@998 (line 6253)
+  0x000001cc9918f1fc: 60f0 eaff | 448b 5424 | 3c4d 8bc2 | 49c1 e003 | 4c8b cd49 | c1e1 0348 | 8b54 2430 
+
+  0x000001cc9918f218: ;   {optimized virtual_call}
+  0x000001cc9918f218: 6666 90e8 
+
+  0x000001cc9918f21c: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokevirtual drawSetup {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@38 (line 301)
+                      ; - org.example.Main::loop@998 (line 6253)
+  0x000001cc9918f21c: c0ca e7ff | c5fa 1044 
+
+  0x000001cc9918f224: ;   {static_call}
+  0x000001cc9918f224: 2448 90e8 
+
+  0x000001cc9918f228: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glLineWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glLineWidth@1 (line 4078)
+                      ; - Engine.Object::drawCurveForLineStrip@44 (line 302)
+                      ; - org.example.Main::loop@998 (line 6253)
+  0x000001cc9918f228: 14c6 e6ff | c5fa 1044 
+
+  0x000001cc9918f230: ;   {static_call}
+  0x000001cc9918f230: 2448 90e8 
+
+  0x000001cc9918f234: ; ImmutableOopMap {[32]=Oop [40]=Oop [48]=Oop [68]=NarrowOop }
+                      ;*invokestatic glPointSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glPointSize@1 (line 4969)
+                      ; - Engine.Object::drawCurveForLineStrip@50 (line 303)
+                      ; - org.example.Main::loop@998 (line 6253)
+  0x000001cc9918f234: 08ca e6ff | 4c8b 5424 | 3045 8b5a | 3447 8b54 
+
+  0x000001cc9918f244: ;   {metadata('java/util/ArrayList')}
+  0x000001cc9918f244: dc08 4181 | faa0 fa0d | 000f 8541 | 0300 004f | 8d14 dc45 | 8b4a 10ba | 0300 0000 
+
+  0x000001cc9918f260: ;   {static_call}
+  0x000001cc9918f260: 4533 c0e8 
+
+  0x000001cc9918f264: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*invokestatic glDrawArrays {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawArrays@3 (line 1826)
+                      ; - Engine.Object::drawCurveForLineStrip@64 (line 304)
+                      ; - org.example.Main::loop@998 (line 6253)
+  0x000001cc9918f264: d8cd e6ff | 4d8b 9780 
+
+  0x000001cc9918f26c: ; ImmutableOopMap {[32]=Oop [40]=Oop [68]=NarrowOop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@1001 (line 6254)
+                      ;   {poll}
+  0x000001cc9918f26c: 0300 0041 | 8502 448b | 5424 4447 | 8b5c d410 | 448b 4424 | 3845 3bc3 | 750a 4c8b | 5424 20e9 
+  0x000001cc9918f28c: 80fc ffff | 448b 5424 | 5844 8944 | 2458 c5fa | 104c 2448 | c5fa 1044 | 244c c5fa | 105c 2450 
+  0x000001cc9918f2ac: c5fa 1054 | 2454 e96a | feff ffc4 | 817a 115c | c410 e988 | fdff ff48 | 8b7e 288b | 0f48 83c7 
+  0x000001cc9918f2cc: 0848 85c0 | f248 af0f | 8504 0000 | 0048 8946 | 200f 843f | e2ff ffba | 8dff ffff | 4889 5c24 
+  0x000001cc9918f2ec: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f2ec: 2066 90e8 
+
+  0x000001cc9918f2f0: ; ImmutableOopMap {rbp=Oop [32]=Oop }
+                      ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.example.Main::loop@256 (line 6195)
+  0x000001cc9918f2f0: 0cb2 70ff | 4489 5c24 | 2c4c 894c | 2420 4b8d | 2cc4 4489 
+
+  0x000001cc9918f304: ;   {metadata('java/util/ArrayList$Itr')}
+  0x000001cc9918f304: 4424 2848 | baf0 f71a | 0008 0000 
+
+  0x000001cc9918f310: ;   {runtime_call _new_instance_Java}
+  0x000001cc9918f310: 0066 90e8 
+
+  0x000001cc9918f314: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=1}
+                      ; - java.util.ArrayList::iterator@0 (line 947)
+                      ; - org.example.Main::loop@252 (line 6195)
+  0x000001cc9918f314: 6897 7bff | e929 eaff | ffba e4ff | ffff 4489 | 4c24 2844 | 8b54 2438 | 4489 5424 
+
+  0x000001cc9918f330: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f330: 3466 90e8 
+
+  0x000001cc9918f334: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop [60]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@56 (line 6179)
+  0x000001cc9918f334: c8b1 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2044 | 8b44 2438 | 448b 5424 | 3044 8954 
+  0x000001cc9918f354: 2428 4489 | 5c24 2c44 | 8944 2430 
+
+  0x000001cc9918f360: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f360: 6666 90e8 
+
+  0x000001cc9918f364: ; ImmutableOopMap {rbp=Oop [60]=NarrowOop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::checkForComodification@11 (line 1012)
+                      ; - java.util.ArrayList$Itr::next@1 (line 967)
+                      ; - org.example.Main::loop@56 (line 6179)
+  0x000001cc9918f364: 98b1 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4c24 2444 | 8954 2428 | 4489 4c24 | 2c44 895c 
+  0x000001cc9918f384: 2430 448b | 5c24 3844 | 895c 2434 
+
+  0x000001cc9918f390: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f390: 6666 90e8 
+
+  0x000001cc9918f394: ; ImmutableOopMap {rbp=Oop [60]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@17 (line 969)
+                      ; - org.example.Main::loop@56 (line 6179)
+  0x000001cc9918f394: 68b1 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4c24 2444 | 8954 242c | 4489 5c24 
+
+  0x000001cc9918f3b0: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f3b0: 3466 90e8 
+
+  0x000001cc9918f3b4: ; ImmutableOopMap {rbp=Oop [36]=NarrowOop [60]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@39 (line 972)
+                      ; - org.example.Main::loop@56 (line 6179)
+  0x000001cc9918f3b4: 48b1 70ff | bade ffff | ff49 8bea | 4889 5c24 
+
+  0x000001cc9918f3c4: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f3c4: 2866 90e8 
+
+  0x000001cc9918f3c8: ; ImmutableOopMap {rbp=Oop [40]=Oop }
+                      ;*invokeinterface hasNext {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.example.Main::loop@257 (line 6195)
+  0x000001cc9918f3c8: 34b1 70ff | 4533 d2e9 | 1de1 ffff | 33db e947 | e1ff ffba | e4ff ffff | 488b 6c24 | 2044 8954 
+  0x000001cc9918f3e8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f3e8: 2420 90e8 
+
+  0x000001cc9918f3ec: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@896 (line 6246)
+  0x000001cc9918f3ec: 10b1 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f3fc: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f3fc: 5424 20e8 
+
+  0x000001cc9918f400: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@812 (line 6236)
+  0x000001cc9918f400: fcb0 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f410: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f410: 4424 20e8 
+
+  0x000001cc9918f414: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@854 (line 6243)
+  0x000001cc9918f414: e8b0 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f424: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f424: 4424 20e8 
+
+  0x000001cc9918f428: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@938 (line 6249)
+  0x000001cc9918f428: d4b0 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f438: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f438: 5c24 20e8 
+
+  0x000001cc9918f43c: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@980 (line 6252)
+  0x000001cc9918f43c: c0b0 70ff | baf6 ffff 
+
+  0x000001cc9918f444: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f444: ff66 90e8 
+
+  0x000001cc9918f448: ; ImmutableOopMap {}
+                      ;*putfield x {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) Engine.MouseInput::input@5 (line 54)
+                      ; - Engine.Window::update@45 (line 121)
+                      ; - org.example.Main::loop@14 (line 6173)
+  0x000001cc9918f448: b4b0 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f458: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f458: 4424 20e8 
+
+  0x000001cc9918f45c: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@98 (line 6183)
+  0x000001cc9918f45c: a0b0 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f46c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f46c: 5424 20e8 
+
+  0x000001cc9918f470: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@140 (line 6186)
+  0x000001cc9918f470: 8cb0 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f480: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f480: 4424 20e8 
+
+  0x000001cc9918f484: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@182 (line 6189)
+  0x000001cc9918f484: 78b0 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f494: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f494: 5424 20e8 
+
+  0x000001cc9918f498: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@224 (line 6192)
+  0x000001cc9918f498: 64b0 70ff | bade ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 894c 2430 | 4489 5424 
+
+  0x000001cc9918f4b4: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f4b4: 3466 90e8 
+
+  0x000001cc9918f4b8: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@4 (line 296)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918f4b8: 44b0 70ff | bade ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 894c 2430 | 4489 5424 
+
+  0x000001cc9918f4d4: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f4d4: 3466 90e8 
+
+  0x000001cc9918f4d8: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@4 (line 296)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918f4d8: 24b0 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f4e8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f4e8: 5c24 20e8 
+
+  0x000001cc9918f4ec: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@59 (line 304)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918f4ec: 10b0 70ff | bade ffff | ff4c 8b54 | 2430 4c89 | 5424 2844 | 8b54 243c | 4489 5424 | 3044 895c 
+  0x000001cc9918f50c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f50c: 2434 90e8 
+
+  0x000001cc9918f510: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@4 (line 296)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918f510: ecaf 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f520: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f520: 5c24 20e8 
+
+  0x000001cc9918f524: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@59 (line 304)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918f524: d8af 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f534: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f534: 5c24 20e8 
+
+  0x000001cc9918f538: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@59 (line 304)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918f538: c4af 70ff | bade ffff | ff4c 8b54 | 2430 4c89 | 5424 2844 | 8b54 243c | 4489 5424 | 3044 895c 
+  0x000001cc9918f558: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f558: 2434 90e8 
+
+  0x000001cc9918f55c: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@4 (line 296)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918f55c: a0af 70ff | bade ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 894c 2430 | 4489 5424 
+
+  0x000001cc9918f578: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f578: 3466 90e8 
+
+  0x000001cc9918f57c: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@4 (line 296)
+                      ; - org.example.Main::loop@998 (line 6253)
+  0x000001cc9918f57c: 80af 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f58c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f58c: 5c24 20e8 
+
+  0x000001cc9918f590: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@59 (line 304)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918f590: 6caf 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f5a0: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f5a0: 5c24 20e8 
+
+  0x000001cc9918f5a4: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@59 (line 304)
+                      ; - org.example.Main::loop@998 (line 6253)
+  0x000001cc9918f5a4: 58af 70ff | bade ffff | ff4c 8b54 | 2430 4c89 | 5424 2844 | 894c 2430 | 4489 5c24 
+
+  0x000001cc9918f5c0: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f5c0: 3466 90e8 
+
+  0x000001cc9918f5c4: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@116 (line 6184)
+  0x000001cc9918f5c4: 38af 70ff | bade ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 8b44 243c | 4489 4424 | 3044 8954 
+  0x000001cc9918f5e4: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f5e4: 2434 90e8 
+
+  0x000001cc9918f5e8: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@158 (line 6187)
+  0x000001cc9918f5e8: 14af 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f5f8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f5f8: 5424 20e8 
+
+  0x000001cc9918f5fc: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@116 (line 6184)
+  0x000001cc9918f5fc: 00af 70ff | bade ffff | ff4c 8b54 | 2430 4c89 | 5424 2844 | 894c 2430 | 4489 5c24 
+
+  0x000001cc9918f618: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f618: 3466 90e8 
+
+  0x000001cc9918f61c: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@200 (line 6190)
+  0x000001cc9918f61c: e0ae 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f62c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f62c: 5424 20e8 
+
+  0x000001cc9918f630: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@158 (line 6187)
+  0x000001cc9918f630: ccae 70ff | bade ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 8b44 243c | 4489 4424 | 3044 8954 
+  0x000001cc9918f650: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f650: 2434 90e8 
+
+  0x000001cc9918f654: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@242 (line 6193)
+  0x000001cc9918f654: a8ae 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f664: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f664: 5424 20e8 
+
+  0x000001cc9918f668: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@200 (line 6190)
+  0x000001cc9918f668: 94ae 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f678: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f678: 5424 20e8 
+
+  0x000001cc9918f67c: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@242 (line 6193)
+  0x000001cc9918f67c: 80ae 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f68c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f68c: 4424 20e8 
+
+  0x000001cc9918f690: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@350 (line 6201)
+  0x000001cc9918f690: 6cae 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f6a0: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f6a0: 5424 20e8 
+
+  0x000001cc9918f6a4: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@308 (line 6198)
+  0x000001cc9918f6a4: 58ae 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f6b4: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f6b4: 5424 20e8 
+
+  0x000001cc9918f6b8: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@392 (line 6204)
+  0x000001cc9918f6b8: 44ae 70ff | bae4 ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f6c8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f6c8: 4424 20e8 
+
+  0x000001cc9918f6cc: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@770 (line 6233)
+  0x000001cc9918f6cc: 30ae 70ff | bade ffff | ff4c 8b54 | 2430 4c89 | 5424 2844 | 8b54 243c | 4489 5424 | 3044 895c 
+  0x000001cc9918f6ec: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f6ec: 2434 90e8 
+
+  0x000001cc9918f6f0: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@368 (line 6202)
+  0x000001cc9918f6f0: 0cae 70ff | bade ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 894c 2430 | 4489 5424 
+
+  0x000001cc9918f70c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f70c: 3466 90e8 
+
+  0x000001cc9918f710: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@326 (line 6199)
+  0x000001cc9918f710: ecad 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f720: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f720: 5c24 20e8 
+
+  0x000001cc9918f724: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@368 (line 6202)
+  0x000001cc9918f724: d8ad 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f734: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f734: 5c24 20e8 
+
+  0x000001cc9918f738: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@326 (line 6199)
+  0x000001cc9918f738: c4ad 70ff | bade ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 894c 2430 | 4489 5424 
+
+  0x000001cc9918f754: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f754: 3466 90e8 
+
+  0x000001cc9918f758: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@410 (line 6205)
+  0x000001cc9918f758: a4ad 70ff | bade ffff | ff4c 8b54 | 2430 4c89 | 5424 2844 | 8b54 243c | 4489 5424 | 3044 895c 
+  0x000001cc9918f778: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f778: 2434 90e8 
+
+  0x000001cc9918f77c: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [52]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@4 (line 296)
+                      ; - org.example.Main::loop@788 (line 6234)
+  0x000001cc9918f77c: 80ad 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f78c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f78c: 5c24 20e8 
+
+  0x000001cc9918f790: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@410 (line 6205)
+  0x000001cc9918f790: 6cad 70ff | bade ffff | ff48 8b6c | 2420 4489 
+
+  0x000001cc9918f7a0: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f7a0: 5c24 20e8 
+
+  0x000001cc9918f7a4: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [68]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurveForLineStrip@59 (line 304)
+                      ; - org.example.Main::loop@788 (line 6234)
+  0x000001cc9918f7a4: 58ad 70ff | bae4 ffff | ff48 8b6c | 2428 4489 | 5c24 2844 | 8954 242c 
+
+  0x000001cc9918f7bc: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f7bc: 6666 90e8 
+
+  0x000001cc9918f7c0: ; ImmutableOopMap {rbp=Oop [40]=NarrowOop [48]=Oop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.util.ArrayList$Itr::next@64 (line 975)
+                      ; - org.example.Main::loop@266 (line 6195)
+  0x000001cc9918f7c0: 3cad 70ff | bade ffff | ff4c 8954 | 2420 4c8b | 5424 304c | 8954 2428 | 4c8b 5424 | 384c 8954 
+  0x000001cc9918f7e0: 2430 4489 
+
+  0x000001cc9918f7e4: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f7e4: 4424 3ce8 
+
+  0x000001cc9918f7e8: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=Oop [60]=NarrowOop [64]=NarrowOop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@4 (line 284)
+                      ; - org.example.Main::loop@284 (line 6196)
+  0x000001cc9918f7e8: 14ad 70ff | bade ffff | ff48 8b6c | 2428 4489 
+
+  0x000001cc9918f7f8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f7f8: 5424 28e8 
+
+  0x000001cc9918f7fc: ; ImmutableOopMap {rbp=Oop [40]=NarrowOop [48]=Oop }
+                      ;*invokeinterface size {reexecute=0 rethrow=0 return_oop=0}
+                      ; - Engine.Object::drawCurve@60 (line 292)
+                      ; - org.example.Main::loop@284 (line 6196)
+  0x000001cc9918f7fc: 00ad 70ff 
+
+  0x000001cc9918f800: ;   {section_word}
+  0x000001cc9918f800: c5f8 2e05 | 78dc ffff | bdff ffff | ff0f 8a0e | 0000 000f | 8208 0000 | 0040 0f95 | c540 0fb6 
+  0x000001cc9918f820: edba 45ff | ffff 4489 
+
+  0x000001cc9918f828: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f828: 5424 28e8 
+
+  0x000001cc9918f82c: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifle {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) Engine.MouseInput::input@25 (line 56)
+                      ; - Engine.Window::update@45 (line 121)
+                      ; - org.example.Main::loop@14 (line 6173)
+  0x000001cc9918f82c: d0ac 70ff 
+
+  0x000001cc9918f830: ;   {section_word}
+  0x000001cc9918f830: c5f8 2e0d | 48dc ffff | bdff ffff | ff0f 8a0e | 0000 000f | 8208 0000 | 0040 0f95 | c540 0fb6 
+  0x000001cc9918f850: edba 45ff | ffff 4489 
+
+  0x000001cc9918f858: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f858: 5424 28e8 
+
+  0x000001cc9918f85c: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifle {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) Engine.MouseInput::input@37 (line 56)
+                      ; - Engine.Window::update@45 (line 121)
+                      ; - org.example.Main::loop@14 (line 6173)
+  0x000001cc9918f85c: a0ac 70ff | 478b 44dc | 0c45 85c9 | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f87c: 5c24 2844 | 8944 242c 
+
+  0x000001cc9918f884: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f884: 6666 90e8 
+
+  0x000001cc9918f888: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@430 (line 6207)
+  0x000001cc9918f888: 74ac 70ff | 438b 4cc4 | 0c45 85db | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f8a8: 4424 2889 
+
+  0x000001cc9918f8ac: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f8ac: 4c24 2ce8 
+
+  0x000001cc9918f8b0: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@472 (line 6210)
+  0x000001cc9918f8b0: 4cac 70ff | 478b 44dc | 0c45 85c9 | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f8d0: 5c24 2844 | 8944 242c 
+
+  0x000001cc9918f8d8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f8d8: 6666 90e8 
+
+  0x000001cc9918f8dc: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@514 (line 6213)
+  0x000001cc9918f8dc: 20ac 70ff | 438b 4cc4 | 0c45 85db | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f8fc: 4424 2889 
+
+  0x000001cc9918f900: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f900: 4c24 2ce8 
+
+  0x000001cc9918f904: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@556 (line 6216)
+  0x000001cc9918f904: f8ab 70ff | 478b 44dc | 0c45 85c9 | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f924: 5c24 2844 | 8944 242c 
+
+  0x000001cc9918f92c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f92c: 6666 90e8 
+
+  0x000001cc9918f930: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@598 (line 6219)
+  0x000001cc9918f930: ccab 70ff | 438b 4cc4 | 0c45 85db | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f950: 4424 2889 
+
+  0x000001cc9918f954: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f954: 4c24 2ce8 
+
+  0x000001cc9918f958: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@640 (line 6222)
+  0x000001cc9918f958: a4ab 70ff | 478b 44dc | 0c45 85c9 | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f978: 5c24 2844 | 8944 242c 
+
+  0x000001cc9918f980: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f980: 6666 90e8 
+
+  0x000001cc9918f984: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@682 (line 6225)
+  0x000001cc9918f984: 78ab 70ff | 438b 4cc4 | 0c45 85db | 400f 95c5 | 400f b6ed | ba45 ffff | ff4c 8954 | 2420 4489 
+  0x000001cc9918f9a4: 4424 2889 
+
+  0x000001cc9918f9a8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f9a8: 4c24 2ce8 
+
+  0x000001cc9918f9ac: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.example.Main::loop@724 (line 6228)
+  0x000001cc9918f9ac: 50ab 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2044 | 8b44 2440 | 4489 5c24 | 2c44 8944 
+  0x000001cc9918f9cc: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f9cc: 2430 90e8 
+
+  0x000001cc9918f9d0: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::checkForComodification@11 (line 1012)
+                      ; - java.util.ArrayList$Itr::next@1 (line 967)
+                      ; - org.example.Main::loop@896 (line 6246)
+  0x000001cc9918f9d0: 2cab 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 5424 2844 | 895c 2430 
+
+  0x000001cc9918f9e8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918f9e8: 6666 90e8 
+
+  0x000001cc9918f9ec: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@17 (line 969)
+                      ; - org.example.Main::loop@896 (line 6246)
+  0x000001cc9918f9ec: 10ab 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 5424 2444 | 894c 242c | 4489 5c24 
+
+  0x000001cc9918fa08: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fa08: 3466 90e8 
+
+  0x000001cc9918fa0c: ; ImmutableOopMap {rbp=Oop [36]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@39 (line 972)
+                      ; - org.example.Main::loop@896 (line 6246)
+  0x000001cc9918fa0c: f0aa 70ff | ba45 ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 894c 2430 | 4489 5424 
+
+  0x000001cc9918fa28: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fa28: 3466 90e8 
+
+  0x000001cc9918fa2c: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) Engine.Object::drawCurveForLineStrip@10 (line 296)
+                      ; - org.example.Main::loop@914 (line 6247)
+  0x000001cc9918fa2c: d0aa 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2044 | 8b44 2440 | 4489 5c24 | 2c44 8944 
+  0x000001cc9918fa4c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fa4c: 2430 90e8 
+
+  0x000001cc9918fa50: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::checkForComodification@11 (line 1012)
+                      ; - java.util.ArrayList$Itr::next@1 (line 967)
+                      ; - org.example.Main::loop@812 (line 6236)
+  0x000001cc9918fa50: acaa 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 5424 2844 | 895c 2430 
+
+  0x000001cc9918fa68: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fa68: 6666 90e8 
+
+  0x000001cc9918fa6c: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@17 (line 969)
+                      ; - org.example.Main::loop@812 (line 6236)
+  0x000001cc9918fa6c: 90aa 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 5424 2444 | 894c 242c | 4489 5c24 
+
+  0x000001cc9918fa88: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fa88: 3466 90e8 
+
+  0x000001cc9918fa8c: ; ImmutableOopMap {rbp=Oop [36]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@39 (line 972)
+                      ; - org.example.Main::loop@812 (line 6236)
+  0x000001cc9918fa8c: 70aa 70ff | ba45 ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 894c 2430 | 4489 5424 
+
+  0x000001cc9918faa8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918faa8: 3466 90e8 
+
+  0x000001cc9918faac: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) Engine.Object::drawCurveForLineStrip@10 (line 296)
+                      ; - org.example.Main::loop@830 (line 6237)
+  0x000001cc9918faac: 50aa 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2044 | 8b54 2440 | 4489 5c24 | 2c44 8954 
+  0x000001cc9918facc: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918facc: 2430 90e8 
+
+  0x000001cc9918fad0: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::checkForComodification@11 (line 1012)
+                      ; - java.util.ArrayList$Itr::next@1 (line 967)
+                      ; - org.example.Main::loop@854 (line 6243)
+  0x000001cc9918fad0: 2caa 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 5424 2844 | 895c 2430 
+
+  0x000001cc9918fae8: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fae8: 6666 90e8 
+
+  0x000001cc9918faec: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@17 (line 969)
+                      ; - org.example.Main::loop@854 (line 6243)
+  0x000001cc9918faec: 10aa 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2444 | 8954 242c | 4489 5c24 
+
+  0x000001cc9918fb08: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fb08: 3466 90e8 
+
+  0x000001cc9918fb0c: ; ImmutableOopMap {rbp=Oop [36]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@39 (line 972)
+                      ; - org.example.Main::loop@854 (line 6243)
+  0x000001cc9918fb0c: f0a9 70ff | ba45 ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 8b5c 243c | 4489 5c24 | 3044 8954 
+  0x000001cc9918fb2c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fb2c: 2434 90e8 
+
+  0x000001cc9918fb30: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) Engine.Object::drawCurveForLineStrip@10 (line 296)
+                      ; - org.example.Main::loop@872 (line 6244)
+  0x000001cc9918fb30: cca9 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2044 | 8b54 2440 | 4489 5c24 | 2c44 8954 
+  0x000001cc9918fb50: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fb50: 2430 90e8 
+
+  0x000001cc9918fb54: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::checkForComodification@11 (line 1012)
+                      ; - java.util.ArrayList$Itr::next@1 (line 967)
+                      ; - org.example.Main::loop@938 (line 6249)
+  0x000001cc9918fb54: a8a9 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 5424 2844 | 895c 2430 
+
+  0x000001cc9918fb6c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fb6c: 6666 90e8 
+
+  0x000001cc9918fb70: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@17 (line 969)
+                      ; - org.example.Main::loop@938 (line 6249)
+  0x000001cc9918fb70: 8ca9 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2444 | 8954 242c | 4489 5c24 
+
+  0x000001cc9918fb8c: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fb8c: 3466 90e8 
+
+  0x000001cc9918fb90: ; ImmutableOopMap {rbp=Oop [36]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmplt {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::next@39 (line 972)
+                      ; - org.example.Main::loop@938 (line 6249)
+  0x000001cc9918fb90: 6ca9 70ff | ba45 ffff | ff4c 8b5c | 2430 4c89 | 5c24 2844 | 8b5c 243c | 4489 5c24 | 3044 8954 
+  0x000001cc9918fbb0: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fbb0: 2434 90e8 
+
+  0x000001cc9918fbb4: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=Oop [48]=NarrowOop [68]=NarrowOop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) Engine.Object::drawCurveForLineStrip@10 (line 296)
+                      ; - org.example.Main::loop@956 (line 6250)
+  0x000001cc9918fbb4: 48a9 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 4424 2044 | 8b44 2440 | 4489 5424 | 2c44 8944 
+  0x000001cc9918fbd4: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fbd4: 2430 90e8 
+
+  0x000001cc9918fbd8: ; ImmutableOopMap {rbp=Oop [68]=NarrowOop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.util.ArrayList$Itr::checkForComodification@11 (line 1012)
+                      ; - java.util.ArrayList$Itr::next@1 (line 967)
+                      ; - org.example.Main::loop@980 (line 6252)
+  0x000001cc9918fbd8: 24a9 70ff | ba45 ffff | ff48 8b6c | 2420 4489 | 5c24 2844 | 8954 2430 
+
+  0x000001cc9918fbf0: ;   {runtime_call UncommonTrapBlob}
+  0x000001cc9918fbf0: 6666 90e8 
+[error occurred during error reporting (printing code blobs if possible), id 0xe0000001, Out of Memory Error (s\open\src\hotspot\share\memory\arena.cpp:184)]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001ccc700db40, length=13, elements={
+0x000001cc894c3360, 0x000001ccb1508140, 0x000001ccb1508c70, 0x000001ccb150cd20,
+0x000001ccb1513bc0, 0x000001ccb15144f0, 0x000001ccb1511e10, 0x000001ccb151a4e0,
+0x000001ccb151ea50, 0x000001ccb15273e0, 0x000001ccb15f4230, 0x000001ccb1b075f0,
+0x000001ccb1b07b30
+}
+
+Java Threads: ( => current thread )
+=>0x000001cc894c3360 JavaThread "main" [_thread_in_native, id=29632, stack(0x00000081b6f00000,0x00000081b7000000)]
+  0x000001ccb1508140 JavaThread "Reference Handler" daemon [_thread_blocked, id=29588, stack(0x00000081b7600000,0x00000081b7700000)]
+  0x000001ccb1508c70 JavaThread "Finalizer" daemon [_thread_blocked, id=26872, stack(0x00000081b7700000,0x00000081b7800000)]
+  0x000001ccb150cd20 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=24220, stack(0x00000081b7800000,0x00000081b7900000)]
+  0x000001ccb1513bc0 JavaThread "Attach Listener" daemon [_thread_blocked, id=26788, stack(0x00000081b7900000,0x00000081b7a00000)]
+  0x000001ccb15144f0 JavaThread "Service Thread" daemon [_thread_blocked, id=31764, stack(0x00000081b7a00000,0x00000081b7b00000)]
+  0x000001ccb1511e10 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=2132, stack(0x00000081b7b00000,0x00000081b7c00000)]
+  0x000001ccb151a4e0 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=18240, stack(0x00000081b7c00000,0x00000081b7d00000)]
+  0x000001ccb151ea50 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=12832, stack(0x00000081b7d00000,0x00000081b7e00000)]
+  0x000001ccb15273e0 JavaThread "Sweeper thread" daemon [_thread_blocked, id=18708, stack(0x00000081b7e00000,0x00000081b7f00000)]
+  0x000001ccb15f4230 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=18124, stack(0x00000081b7f00000,0x00000081b8000000)]
+  0x000001ccb1b075f0 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=13028, stack(0x00000081b8400000,0x00000081b8500000)]
+  0x000001ccb1b07b30 JavaThread "Notification Thread" daemon [_thread_blocked, id=28936, stack(0x00000081b8500000,0x00000081b8600000)]
+
+Other Threads:
+  0x000001ccac773260 VMThread "VM Thread" [stack: 0x00000081b7500000,0x00000081b7600000] [id=5564]
+  0x000001ccb18f67d0 WatcherThread "VM Periodic Task Thread" [stack: 0x00000081b8600000,0x00000081b8700000] [id=7384]
+  0x000001cc89532a90 WorkerThread "GC Thread#0" [stack: 0x00000081b7000000,0x00000081b7100000] [id=22468]
+  0x000001ccb1b384d0 WorkerThread "GC Thread#1" [stack: 0x00000081b8300000,0x00000081b8400000] [id=27672]
+  0x000001ccb1b387a0 WorkerThread "GC Thread#2" [stack: 0x00000081b8e00000,0x00000081b8f00000] [id=27944]
+  0x000001ccb1b392e0 WorkerThread "GC Thread#3" [stack: 0x00000081b8f00000,0x00000081b9000000] [id=8912]
+  0x000001ccb1b38200 WorkerThread "GC Thread#4" [stack: 0x00000081b9000000,0x00000081b9100000] [id=5688]
+  0x000001ccb1b395b0 WorkerThread "GC Thread#5" [stack: 0x00000081b9100000,0x00000081b9200000] [id=27252]
+  0x000001ccb1b38a70 WorkerThread "GC Thread#6" [stack: 0x00000081b9200000,0x00000081b9300000] [id=14072]
+  0x000001ccb1b39010 WorkerThread "GC Thread#7" [stack: 0x00000081b9300000,0x00000081b9400000] [id=16272]
+  0x000001ccb1b37c60 WorkerThread "GC Thread#8" [stack: 0x00000081b9400000,0x00000081b9500000] [id=13928]
+  0x000001ccc0303400 WorkerThread "GC Thread#9" [stack: 0x00000081b9600000,0x00000081b9700000] [id=14320]
+  0x000001ccc0302050 WorkerThread "GC Thread#10" [stack: 0x00000081b9700000,0x00000081b9800000] [id=11636]
+  0x000001cc895439e0 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000081b7100000,0x00000081b7200000] [id=21524]
+  0x000001cc895446f0 WorkerThread "G1 Conc#0" [stack: 0x00000081b7200000,0x00000081b7300000] [id=30976]
+  0x000001ccac61fad0 ConcurrentGCThread "G1 Refine#0" [stack: 0x00000081b7300000,0x00000081b7400000] [id=27464]
+  0x000001ccac620520 ConcurrentGCThread "G1 Service" [stack: 0x00000081b7400000,0x00000081b7500000] [id=21788]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000703600000, size: 4042 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000800000000-0x0000000800c40000-0x0000000800c40000), size 12845056, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Compressed class space mapped at: 0x0000000801000000-0x0000000841000000, reserved size: 1073741824
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x100000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+ CPUs: 16 total, 16 available
+ Memory: 16163M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (Zero based)
+ Heap Region Size: 2M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 254M
+ Heap Max Capacity: 4042M
+ Pre-touch: Disabled
+ Parallel Workers: 13
+ Concurrent Workers: 3
+ Concurrent Refinement Workers: 13
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 260096K, used 202056K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 70 young (143360K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x0000000703600000, 0x0000000703800000, 0x0000000703800000|100%| O|  |TAMS 0x0000000703600000, 0x0000000703600000| Untracked 
+|   1|0x0000000703800000, 0x0000000703a00000, 0x0000000703a00000|100%|HS|  |TAMS 0x0000000703800000, 0x0000000703800000| Complete 
+|   2|0x0000000703a00000, 0x0000000703c00000, 0x0000000703c00000|100%|HS|  |TAMS 0x0000000703a00000, 0x0000000703a00000| Complete 
+|   3|0x0000000703c00000, 0x0000000703e00000, 0x0000000703e00000|100%| O|  |TAMS 0x0000000703c00000, 0x0000000703c00000| Untracked 
+|   4|0x0000000703e00000, 0x0000000704000000, 0x0000000704000000|100%| O|  |TAMS 0x0000000703e00000, 0x0000000703e00000| Untracked 
+|   5|0x0000000704000000, 0x0000000704200000, 0x0000000704200000|100%| O|  |TAMS 0x0000000704000000, 0x0000000704000000| Untracked 
+|   6|0x0000000704200000, 0x0000000704400000, 0x0000000704400000|100%| O|  |TAMS 0x0000000704200000, 0x0000000704200000| Untracked 
+|   7|0x0000000704400000, 0x0000000704600000, 0x0000000704600000|100%| O|  |TAMS 0x0000000704400000, 0x0000000704400000| Untracked 
+|   8|0x0000000704600000, 0x0000000704800000, 0x0000000704800000|100%| O|  |TAMS 0x0000000704600000, 0x0000000704600000| Untracked 
+|   9|0x0000000704800000, 0x0000000704a00000, 0x0000000704a00000|100%|HS|  |TAMS 0x0000000704800000, 0x0000000704800000| Complete 
+|  10|0x0000000704a00000, 0x0000000704c00000, 0x0000000704c00000|100%|HS|  |TAMS 0x0000000704a00000, 0x0000000704a00000| Complete 
+|  11|0x0000000704c00000, 0x0000000704e00000, 0x0000000704e00000|100%| O|  |TAMS 0x0000000704c00000, 0x0000000704c00000| Untracked 
+|  12|0x0000000704e00000, 0x0000000705000000, 0x0000000705000000|100%| O|  |TAMS 0x0000000704e00000, 0x0000000704e00000| Untracked 
+|  13|0x0000000705000000, 0x0000000705200000, 0x0000000705200000|100%| O|  |TAMS 0x0000000705000000, 0x0000000705000000| Untracked 
+|  14|0x0000000705200000, 0x0000000705400000, 0x0000000705400000|100%| O|  |TAMS 0x0000000705200000, 0x0000000705200000| Untracked 
+|  15|0x0000000705400000, 0x0000000705600000, 0x0000000705600000|100%| O|  |TAMS 0x0000000705400000, 0x0000000705400000| Untracked 
+|  16|0x0000000705600000, 0x0000000705800000, 0x0000000705800000|100%| O|  |TAMS 0x0000000705600000, 0x0000000705600000| Untracked 
+|  17|0x0000000705800000, 0x0000000705a00000, 0x0000000705a00000|100%| O|  |TAMS 0x0000000705800000, 0x0000000705800000| Untracked 
+|  18|0x0000000705a00000, 0x0000000705c00000, 0x0000000705c00000|100%| O|  |TAMS 0x0000000705a00000, 0x0000000705a00000| Untracked 
+|  19|0x0000000705c00000, 0x0000000705e00000, 0x0000000705e00000|100%| O|  |TAMS 0x0000000705c00000, 0x0000000705c00000| Untracked 
+|  20|0x0000000705e00000, 0x0000000706000000, 0x0000000706000000|100%| O|  |TAMS 0x0000000705e00000, 0x0000000705e00000| Untracked 
+|  21|0x0000000706000000, 0x0000000706200000, 0x0000000706200000|100%| O|  |TAMS 0x0000000706000000, 0x0000000706000000| Untracked 
+|  22|0x0000000706200000, 0x0000000706400000, 0x0000000706400000|100%| O|  |TAMS 0x0000000706200000, 0x0000000706200000| Untracked 
+|  23|0x0000000706400000, 0x0000000706600000, 0x0000000706600000|100%| O|  |TAMS 0x0000000706400000, 0x0000000706400000| Untracked 
+|  24|0x0000000706600000, 0x0000000706800000, 0x0000000706800000|100%| O|  |TAMS 0x0000000706600000, 0x0000000706600000| Untracked 
+|  25|0x0000000706800000, 0x0000000706a00000, 0x0000000706a00000|100%| O|  |TAMS 0x0000000706800000, 0x0000000706800000| Untracked 
+|  26|0x0000000706a00000, 0x0000000706c00000, 0x0000000706c00000|100%| O|  |TAMS 0x0000000706a00000, 0x0000000706a00000| Untracked 
+|  27|0x0000000706c00000, 0x0000000706e00000, 0x0000000706e00000|100%| O|  |TAMS 0x0000000706c00000, 0x0000000706c00000| Untracked 
+|  28|0x0000000706e00000, 0x0000000707000000, 0x0000000707000000|100%| O|  |TAMS 0x0000000706e00000, 0x0000000706e00000| Untracked 
+|  29|0x0000000707000000, 0x0000000707200000, 0x0000000707200000|100%| O|  |TAMS 0x0000000707000000, 0x0000000707000000| Untracked 
+|  30|0x0000000707200000, 0x0000000707334200, 0x0000000707400000| 60%| O|  |TAMS 0x0000000707200000, 0x0000000707200000| Untracked 
+|  31|0x0000000707400000, 0x0000000707400000, 0x0000000707600000|  0%| F|  |TAMS 0x0000000707400000, 0x0000000707400000| Untracked 
+|  32|0x0000000707600000, 0x0000000707600000, 0x0000000707800000|  0%| F|  |TAMS 0x0000000707600000, 0x0000000707600000| Untracked 
+|  33|0x0000000707800000, 0x0000000707800000, 0x0000000707a00000|  0%| F|  |TAMS 0x0000000707800000, 0x0000000707800000| Untracked 
+|  34|0x0000000707a00000, 0x0000000707a00000, 0x0000000707c00000|  0%| F|  |TAMS 0x0000000707a00000, 0x0000000707a00000| Untracked 
+|  35|0x0000000707c00000, 0x0000000707c00000, 0x0000000707e00000|  0%| F|  |TAMS 0x0000000707c00000, 0x0000000707c00000| Untracked 
+|  36|0x0000000707e00000, 0x0000000707e00000, 0x0000000708000000|  0%| F|  |TAMS 0x0000000707e00000, 0x0000000707e00000| Untracked 
+|  37|0x0000000708000000, 0x0000000708000000, 0x0000000708200000|  0%| F|  |TAMS 0x0000000708000000, 0x0000000708000000| Untracked 
+|  38|0x0000000708200000, 0x0000000708200000, 0x0000000708400000|  0%| F|  |TAMS 0x0000000708200000, 0x0000000708200000| Untracked 
+|  39|0x0000000708400000, 0x0000000708400000, 0x0000000708600000|  0%| F|  |TAMS 0x0000000708400000, 0x0000000708400000| Untracked 
+|  40|0x0000000708600000, 0x0000000708600000, 0x0000000708800000|  0%| F|  |TAMS 0x0000000708600000, 0x0000000708600000| Untracked 
+|  41|0x0000000708800000, 0x0000000708800000, 0x0000000708a00000|  0%| F|  |TAMS 0x0000000708800000, 0x0000000708800000| Untracked 
+|  42|0x0000000708a00000, 0x0000000708a00000, 0x0000000708c00000|  0%| F|  |TAMS 0x0000000708a00000, 0x0000000708a00000| Untracked 
+|  43|0x0000000708c00000, 0x0000000708c00000, 0x0000000708e00000|  0%| F|  |TAMS 0x0000000708c00000, 0x0000000708c00000| Untracked 
+|  44|0x0000000708e00000, 0x0000000708e00000, 0x0000000709000000|  0%| F|  |TAMS 0x0000000708e00000, 0x0000000708e00000| Untracked 
+|  45|0x0000000709000000, 0x0000000709000000, 0x0000000709200000|  0%| F|  |TAMS 0x0000000709000000, 0x0000000709000000| Untracked 
+|  46|0x0000000709200000, 0x0000000709200000, 0x0000000709400000|  0%| F|  |TAMS 0x0000000709200000, 0x0000000709200000| Untracked 
+|  47|0x0000000709400000, 0x0000000709400000, 0x0000000709600000|  0%| F|  |TAMS 0x0000000709400000, 0x0000000709400000| Untracked 
+|  48|0x0000000709600000, 0x0000000709600000, 0x0000000709800000|  0%| F|  |TAMS 0x0000000709600000, 0x0000000709600000| Untracked 
+|  49|0x0000000709800000, 0x0000000709800000, 0x0000000709a00000|  0%| F|  |TAMS 0x0000000709800000, 0x0000000709800000| Untracked 
+|  50|0x0000000709a00000, 0x0000000709a1e070, 0x0000000709c00000|  5%| S|CS|TAMS 0x0000000709a00000, 0x0000000709a00000| Complete 
+|  51|0x0000000709c00000, 0x0000000709c00000, 0x0000000709e00000|  0%| F|  |TAMS 0x0000000709c00000, 0x0000000709c00000| Untracked 
+|  52|0x0000000709e00000, 0x0000000709e00000, 0x000000070a000000|  0%| F|  |TAMS 0x0000000709e00000, 0x0000000709e00000| Untracked 
+|  53|0x000000070a000000, 0x000000070a000000, 0x000000070a200000|  0%| F|  |TAMS 0x000000070a000000, 0x000000070a000000| Untracked 
+|  54|0x000000070a200000, 0x000000070a200000, 0x000000070a400000|  0%| F|  |TAMS 0x000000070a200000, 0x000000070a200000| Untracked 
+|  55|0x000000070a400000, 0x000000070a400000, 0x000000070a600000|  0%| F|  |TAMS 0x000000070a400000, 0x000000070a400000| Untracked 
+|  56|0x000000070a600000, 0x000000070a600000, 0x000000070a800000|  0%| F|  |TAMS 0x000000070a600000, 0x000000070a600000| Untracked 
+|  57|0x000000070a800000, 0x000000070a800000, 0x000000070aa00000|  0%| F|  |TAMS 0x000000070a800000, 0x000000070a800000| Untracked 
+|  58|0x000000070aa00000, 0x000000070ab04740, 0x000000070ac00000| 50%| E|  |TAMS 0x000000070aa00000, 0x000000070aa00000| Complete 
+|  59|0x000000070ac00000, 0x000000070ae00000, 0x000000070ae00000|100%| E|CS|TAMS 0x000000070ac00000, 0x000000070ac00000| Complete 
+|  60|0x000000070ae00000, 0x000000070b000000, 0x000000070b000000|100%| E|CS|TAMS 0x000000070ae00000, 0x000000070ae00000| Complete 
+|  61|0x000000070b000000, 0x000000070b200000, 0x000000070b200000|100%| E|CS|TAMS 0x000000070b000000, 0x000000070b000000| Complete 
+|  62|0x000000070b200000, 0x000000070b400000, 0x000000070b400000|100%| E|CS|TAMS 0x000000070b200000, 0x000000070b200000| Complete 
+|  63|0x000000070b400000, 0x000000070b600000, 0x000000070b600000|100%| E|CS|TAMS 0x000000070b400000, 0x000000070b400000| Complete 
+|  64|0x000000070b600000, 0x000000070b800000, 0x000000070b800000|100%| E|CS|TAMS 0x000000070b600000, 0x000000070b600000| Complete 
+|  65|0x000000070b800000, 0x000000070ba00000, 0x000000070ba00000|100%| E|CS|TAMS 0x000000070b800000, 0x000000070b800000| Complete 
+|  66|0x000000070ba00000, 0x000000070bc00000, 0x000000070bc00000|100%| E|CS|TAMS 0x000000070ba00000, 0x000000070ba00000| Complete 
+|  67|0x000000070bc00000, 0x000000070be00000, 0x000000070be00000|100%| E|CS|TAMS 0x000000070bc00000, 0x000000070bc00000| Complete 
+|  68|0x000000070be00000, 0x000000070c000000, 0x000000070c000000|100%| E|CS|TAMS 0x000000070be00000, 0x000000070be00000| Complete 
+|  69|0x000000070c000000, 0x000000070c200000, 0x000000070c200000|100%| E|CS|TAMS 0x000000070c000000, 0x000000070c000000| Complete 
+|  70|0x000000070c200000, 0x000000070c400000, 0x000000070c400000|100%| E|CS|TAMS 0x000000070c200000, 0x000000070c200000| Complete 
+|  71|0x000000070c400000, 0x000000070c600000, 0x000000070c600000|100%| E|CS|TAMS 0x000000070c400000, 0x000000070c400000| Complete 
+|  72|0x000000070c600000, 0x000000070c800000, 0x000000070c800000|100%| E|CS|TAMS 0x000000070c600000, 0x000000070c600000| Complete 
+|  73|0x000000070c800000, 0x000000070ca00000, 0x000000070ca00000|100%| E|CS|TAMS 0x000000070c800000, 0x000000070c800000| Complete 
+|  74|0x000000070ca00000, 0x000000070cc00000, 0x000000070cc00000|100%| E|CS|TAMS 0x000000070ca00000, 0x000000070ca00000| Complete 
+|  75|0x000000070cc00000, 0x000000070ce00000, 0x000000070ce00000|100%| E|CS|TAMS 0x000000070cc00000, 0x000000070cc00000| Complete 
+|  76|0x000000070ce00000, 0x000000070d000000, 0x000000070d000000|100%| E|CS|TAMS 0x000000070ce00000, 0x000000070ce00000| Complete 
+|  77|0x000000070d000000, 0x000000070d200000, 0x000000070d200000|100%| E|CS|TAMS 0x000000070d000000, 0x000000070d000000| Complete 
+|  78|0x000000070d200000, 0x000000070d400000, 0x000000070d400000|100%| E|CS|TAMS 0x000000070d200000, 0x000000070d200000| Complete 
+|  79|0x000000070d400000, 0x000000070d600000, 0x000000070d600000|100%| E|CS|TAMS 0x000000070d400000, 0x000000070d400000| Complete 
+|  80|0x000000070d600000, 0x000000070d800000, 0x000000070d800000|100%| E|CS|TAMS 0x000000070d600000, 0x000000070d600000| Complete 
+|  81|0x000000070d800000, 0x000000070da00000, 0x000000070da00000|100%| E|CS|TAMS 0x000000070d800000, 0x000000070d800000| Complete 
+|  82|0x000000070da00000, 0x000000070dc00000, 0x000000070dc00000|100%| E|CS|TAMS 0x000000070da00000, 0x000000070da00000| Complete 
+|  83|0x000000070dc00000, 0x000000070de00000, 0x000000070de00000|100%| E|CS|TAMS 0x000000070dc00000, 0x000000070dc00000| Complete 
+|  84|0x000000070de00000, 0x000000070e000000, 0x000000070e000000|100%| E|CS|TAMS 0x000000070de00000, 0x000000070de00000| Complete 
+|  85|0x000000070e000000, 0x000000070e200000, 0x000000070e200000|100%| E|CS|TAMS 0x000000070e000000, 0x000000070e000000| Complete 
+|  86|0x000000070e200000, 0x000000070e400000, 0x000000070e400000|100%| E|CS|TAMS 0x000000070e200000, 0x000000070e200000| Complete 
+|  87|0x000000070e400000, 0x000000070e600000, 0x000000070e600000|100%| E|CS|TAMS 0x000000070e400000, 0x000000070e400000| Complete 
+|  88|0x000000070e600000, 0x000000070e800000, 0x000000070e800000|100%| E|CS|TAMS 0x000000070e600000, 0x000000070e600000| Complete 
+|  89|0x000000070e800000, 0x000000070ea00000, 0x000000070ea00000|100%| E|CS|TAMS 0x000000070e800000, 0x000000070e800000| Complete 
+|  90|0x000000070ea00000, 0x000000070ec00000, 0x000000070ec00000|100%| E|CS|TAMS 0x000000070ea00000, 0x000000070ea00000| Complete 
+|  91|0x000000070ec00000, 0x000000070ee00000, 0x000000070ee00000|100%| E|CS|TAMS 0x000000070ec00000, 0x000000070ec00000| Complete 
+|  92|0x000000070ee00000, 0x000000070f000000, 0x000000070f000000|100%| E|CS|TAMS 0x000000070ee00000, 0x000000070ee00000| Complete 
+|  93|0x000000070f000000, 0x000000070f200000, 0x000000070f200000|100%| E|CS|TAMS 0x000000070f000000, 0x000000070f000000| Complete 
+|  94|0x000000070f200000, 0x000000070f400000, 0x000000070f400000|100%| E|CS|TAMS 0x000000070f200000, 0x000000070f200000| Complete 
+|  95|0x000000070f400000, 0x000000070f600000, 0x000000070f600000|100%| E|CS|TAMS 0x000000070f400000, 0x000000070f400000| Complete 
+|  96|0x000000070f600000, 0x000000070f800000, 0x000000070f800000|100%| E|CS|TAMS 0x000000070f600000, 0x000000070f600000| Complete 
+|  97|0x000000070f800000, 0x000000070fa00000, 0x000000070fa00000|100%| E|CS|TAMS 0x000000070f800000, 0x000000070f800000| Complete 
+|  98|0x000000070fa00000, 0x000000070fc00000, 0x000000070fc00000|100%| E|CS|TAMS 0x000000070fa00000, 0x000000070fa00000| Complete 
+|  99|0x000000070fc00000, 0x000000070fe00000, 0x000000070fe00000|100%| E|CS|TAMS 0x000000070fc00000, 0x000000070fc00000| Complete 
+| 100|0x000000070fe00000, 0x0000000710000000, 0x0000000710000000|100%| E|CS|TAMS 0x000000070fe00000, 0x000000070fe00000| Complete 
+| 101|0x0000000710000000, 0x0000000710200000, 0x0000000710200000|100%| E|CS|TAMS 0x0000000710000000, 0x0000000710000000| Complete 
+| 102|0x0000000710200000, 0x0000000710400000, 0x0000000710400000|100%| E|CS|TAMS 0x0000000710200000, 0x0000000710200000| Complete 
+| 103|0x0000000710400000, 0x0000000710600000, 0x0000000710600000|100%| E|CS|TAMS 0x0000000710400000, 0x0000000710400000| Complete 
+| 104|0x0000000710600000, 0x0000000710800000, 0x0000000710800000|100%| E|CS|TAMS 0x0000000710600000, 0x0000000710600000| Complete 
+| 105|0x0000000710800000, 0x0000000710a00000, 0x0000000710a00000|100%| E|CS|TAMS 0x0000000710800000, 0x0000000710800000| Complete 
+| 106|0x0000000710a00000, 0x0000000710c00000, 0x0000000710c00000|100%| E|CS|TAMS 0x0000000710a00000, 0x0000000710a00000| Complete 
+| 107|0x0000000710c00000, 0x0000000710e00000, 0x0000000710e00000|100%| E|CS|TAMS 0x0000000710c00000, 0x0000000710c00000| Complete 
+| 108|0x0000000710e00000, 0x0000000711000000, 0x0000000711000000|100%| E|CS|TAMS 0x0000000710e00000, 0x0000000710e00000| Complete 
+| 109|0x0000000711000000, 0x0000000711200000, 0x0000000711200000|100%| E|CS|TAMS 0x0000000711000000, 0x0000000711000000| Complete 
+| 110|0x0000000711200000, 0x0000000711400000, 0x0000000711400000|100%| E|CS|TAMS 0x0000000711200000, 0x0000000711200000| Complete 
+| 111|0x0000000711400000, 0x0000000711600000, 0x0000000711600000|100%| E|CS|TAMS 0x0000000711400000, 0x0000000711400000| Complete 
+| 112|0x0000000711600000, 0x0000000711800000, 0x0000000711800000|100%| E|CS|TAMS 0x0000000711600000, 0x0000000711600000| Complete 
+| 113|0x0000000711800000, 0x0000000711a00000, 0x0000000711a00000|100%| E|CS|TAMS 0x0000000711800000, 0x0000000711800000| Complete 
+| 114|0x0000000711a00000, 0x0000000711c00000, 0x0000000711c00000|100%| E|CS|TAMS 0x0000000711a00000, 0x0000000711a00000| Complete 
+| 115|0x0000000711c00000, 0x0000000711e00000, 0x0000000711e00000|100%| E|CS|TAMS 0x0000000711c00000, 0x0000000711c00000| Complete 
+| 116|0x0000000711e00000, 0x0000000712000000, 0x0000000712000000|100%| E|CS|TAMS 0x0000000711e00000, 0x0000000711e00000| Complete 
+| 117|0x0000000712000000, 0x0000000712200000, 0x0000000712200000|100%| E|CS|TAMS 0x0000000712000000, 0x0000000712000000| Complete 
+| 118|0x0000000712200000, 0x0000000712400000, 0x0000000712400000|100%| E|CS|TAMS 0x0000000712200000, 0x0000000712200000| Complete 
+| 119|0x0000000712400000, 0x0000000712600000, 0x0000000712600000|100%| E|CS|TAMS 0x0000000712400000, 0x0000000712400000| Complete 
+| 120|0x0000000712600000, 0x0000000712800000, 0x0000000712800000|100%| E|CS|TAMS 0x0000000712600000, 0x0000000712600000| Complete 
+| 121|0x0000000712800000, 0x0000000712a00000, 0x0000000712a00000|100%| E|CS|TAMS 0x0000000712800000, 0x0000000712800000| Complete 
+| 122|0x0000000712a00000, 0x0000000712c00000, 0x0000000712c00000|100%| E|CS|TAMS 0x0000000712a00000, 0x0000000712a00000| Complete 
+| 123|0x0000000712c00000, 0x0000000712e00000, 0x0000000712e00000|100%| E|CS|TAMS 0x0000000712c00000, 0x0000000712c00000| Complete 
+| 124|0x0000000712e00000, 0x0000000713000000, 0x0000000713000000|100%| E|CS|TAMS 0x0000000712e00000, 0x0000000712e00000| Complete 
+| 125|0x0000000713000000, 0x0000000713200000, 0x0000000713200000|100%| E|CS|TAMS 0x0000000713000000, 0x0000000713000000| Complete 
+| 126|0x0000000713200000, 0x0000000713400000, 0x0000000713400000|100%| E|CS|TAMS 0x0000000713200000, 0x0000000713200000| Complete 
+
+Card table byte_map: [0x000001cca1450000,0x000001cca1c40000] _byte_map_base: 0x000001cc9dc35000
+
+Marking Bits (Prev, Next): (CMBitMap*) 0x000001cc89532fd0, (CMBitMap*) 0x000001cc89533010
+ Prev Bits: [0x000001cca2430000, 0x000001cca6358000)
+ Next Bits: [0x000001cca6360000, 0x000001ccaa288000)
+
+Polling page: 0x000001cc87480000
+
+Metaspace:
+
+Usage:
+  Non-class:      7.23 MB used.
+      Class:    331.20 KB used.
+       Both:      7.56 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,       7.31 MB ( 11%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,     448.00 KB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,       7.75 MB ( <1%) committed. 
+
+Chunk freelists:
+   Non-Class:  2.89 MB
+       Class:  3.53 MB
+        Both:  6.42 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 21.00 MB
+CDS: on
+MetaspaceReclaimPolicy: balanced
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - new_chunks_are_fully_committed: 0.
+ - uncommit_free_chunks: 1.
+ - use_allocation_guard: 0.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 0.
+num_arena_births: 120.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 118.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 0.
+num_chunks_taken_from_freelist: 316.
+num_chunk_merges: 0.
+num_chunk_splits: 223.
+num_chunks_enlarged: 169.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=119168Kb used=2149Kb max_used=2169Kb free=117019Kb
+ bounds [0x000001cc98f80000, 0x000001cc991f0000, 0x000001cca03e0000]
+CodeHeap 'profiled nmethods': size=119104Kb used=3420Kb max_used=4844Kb free=115683Kb
+ bounds [0x000001cc913e0000, 0x000001cc918a0000, 0x000001cc98830000]
+CodeHeap 'non-nmethods': size=7488Kb used=1745Kb max_used=3476Kb free=5742Kb
+ bounds [0x000001cc98830000, 0x000001cc98ba0000, 0x000001cc98f80000]
+ total_blobs=3081 nmethods=1989 adapters=1003
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 116.067 Thread 0x000001ccb151a4e0 2339       4       java.nio.ByteBuffer::<init> (14 bytes)
+Event: 116.068 Thread 0x000001ccb151a4e0 nmethod 2339 0x000001cc98f97e90 code [0x000001cc98f98020, 0x000001cc98f98278]
+Event: 116.086 Thread 0x000001ccb151a4e0 2340       4       java.nio.MappedByteBuffer::<init> (22 bytes)
+Event: 116.088 Thread 0x000001ccb151a4e0 nmethod 2340 0x000001cc98fa1410 code [0x000001cc98fa15a0, 0x000001cc98fa1938]
+Event: 116.105 Thread 0x000001ccb151a4e0 2341       4       jdk.internal.misc.Unsafe::allocateMemory (65 bytes)
+Event: 116.105 Thread 0x000001ccb151a4e0 nmethod 2341 0x000001cc99049c90 code [0x000001cc99049e20, 0x000001cc99049f68]
+Event: 116.122 Thread 0x000001ccb151a4e0 2342       4       jdk.internal.misc.Unsafe::setMemory (10 bytes)
+Event: 116.122 Thread 0x000001ccb151a4e0 nmethod 2342 0x000001cc98fa3010 code [0x000001cc98fa31a0, 0x000001cc98fa32a8]
+Event: 118.372 Thread 0x000001ccb151a4e0 2343       4       java.nio.DirectByteBuffer$Deallocator::<init> (41 bytes)
+Event: 118.373 Thread 0x000001ccb151a4e0 nmethod 2343 0x000001cc98f94110 code [0x000001cc98f94280, 0x000001cc98f942f8]
+Event: 127.021 Thread 0x000001ccb151a4e0 2344   !   4       java.nio.DirectByteBuffer::<init> (148 bytes)
+Event: 127.033 Thread 0x000001ccb151a4e0 nmethod 2344 0x000001cc98fa9710 code [0x000001cc98fa9920, 0x000001cc98faa748]
+Event: 142.131 Thread 0x000001ccb151ea50 2345 % !   3       java.lang.ref.Reference::processPendingReferences @ 27 (118 bytes)
+Event: 142.131 Thread 0x000001ccb151ea50 nmethod 2345% 0x000001cc91418290 code [0x000001cc914184e0, 0x000001cc91418ed8]
+Event: 145.118 Thread 0x000001ccb151ea50 2346   !   3       java.lang.ref.Reference::processPendingReferences (118 bytes)
+Event: 145.118 Thread 0x000001ccb151ea50 nmethod 2346 0x000001cc91490590 code [0x000001cc914907e0, 0x000001cc91491178]
+Event: 238.448 Thread 0x000001ccb151a4e0 2347 % !   4       java.lang.ref.Reference::processPendingReferences @ 27 (118 bytes)
+Event: 238.454 Thread 0x000001ccb151a4e0 nmethod 2347% 0x000001cc98fa8290 code [0x000001cc98fa8480, 0x000001cc98fa9048]
+Event: 258.157 Thread 0x000001ccb151a4e0 2348   !   4       java.lang.ref.Reference::processPendingReferences (118 bytes)
+Event: 258.163 Thread 0x000001ccb151a4e0 nmethod 2348 0x000001cc99077490 code [0x000001cc990776c0, 0x000001cc99078440]
+
+GC Heap History (20 events):
+Event: 1069.603 GC heap before
+{Heap before GC invocations=579 (full 0):
+ garbage-first heap   total 260096K, used 216392K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1069.604 GC heap after
+{Heap after GC invocations=580 (full 0):
+ garbage-first heap   total 260096K, used 62809K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1072.789 GC heap before
+{Heap before GC invocations=580 (full 0):
+ garbage-first heap   total 260096K, used 216409K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1072.790 GC heap after
+{Heap after GC invocations=581 (full 0):
+ garbage-first heap   total 260096K, used 62789K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1075.201 GC heap before
+{Heap before GC invocations=581 (full 0):
+ garbage-first heap   total 260096K, used 216389K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1075.203 GC heap after
+{Heap after GC invocations=582 (full 0):
+ garbage-first heap   total 260096K, used 62809K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1077.598 GC heap before
+{Heap before GC invocations=582 (full 0):
+ garbage-first heap   total 260096K, used 216409K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1077.600 GC heap after
+{Heap after GC invocations=583 (full 0):
+ garbage-first heap   total 260096K, used 62789K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1079.991 GC heap before
+{Heap before GC invocations=583 (full 0):
+ garbage-first heap   total 260096K, used 216389K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1079.992 GC heap after
+{Heap after GC invocations=584 (full 0):
+ garbage-first heap   total 260096K, used 62806K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1082.403 GC heap before
+{Heap before GC invocations=584 (full 0):
+ garbage-first heap   total 260096K, used 216406K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1082.404 GC heap after
+{Heap after GC invocations=585 (full 0):
+ garbage-first heap   total 260096K, used 62789K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1084.819 GC heap before
+{Heap before GC invocations=585 (full 0):
+ garbage-first heap   total 260096K, used 216389K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1084.820 GC heap after
+{Heap after GC invocations=586 (full 0):
+ garbage-first heap   total 260096K, used 62803K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1087.322 GC heap before
+{Heap before GC invocations=586 (full 0):
+ garbage-first heap   total 260096K, used 216403K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1087.323 GC heap after
+{Heap after GC invocations=587 (full 0):
+ garbage-first heap   total 260096K, used 62783K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1101.903 GC heap before
+{Heap before GC invocations=587 (full 0):
+ garbage-first heap   total 260096K, used 216383K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1101.904 GC heap after
+{Heap after GC invocations=588 (full 0):
+ garbage-first heap   total 260096K, used 62806K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1106.123 GC heap before
+{Heap before GC invocations=588 (full 0):
+ garbage-first heap   total 260096K, used 216406K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 76 young (155648K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+Event: 1106.124 GC heap after
+{Heap after GC invocations=589 (full 0):
+ garbage-first heap   total 260096K, used 62792K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 7737K, committed 7936K, reserved 1114112K
+  class space    used 331K, committed 448K, reserved 1048576K
+}
+
+Dll operation events (13 events):
+Event: 0.005 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\java.dll
+Event: 0.013 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\jsvml.dll
+Event: 0.085 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\zip.dll
+Event: 0.086 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\instrument.dll
+Event: 0.091 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\net.dll
+Event: 0.092 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\nio.dll
+Event: 0.095 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\zip.dll
+Event: 0.133 Loaded shared library J:\InteliJ\IntelliJ IDEA Community Edition 2022.3.2\bin\breakgen64.dll
+Event: 0.139 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\extnet.dll
+Event: 0.142 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\verify.dll
+Event: 0.161 Loaded shared library C:\Users\User\.jdks\openjdk-19.0.2\bin\jimage.dll
+Event: 0.292 Loaded shared library C:\Users\User\AppData\Local\Temp\lwjglUser\3.3.1-build-7\lwjgl.dll
+Event: 0.660 Loaded shared library C:\Users\User\AppData\Local\Temp\lwjglUser\3.3.1-build-7\lwjgl_opengl.dll
+
+Deoptimization events (20 events):
+Event: 24.233 Thread 0x000001cc894c3360 Uncommon trap: trap_request=0xffffff45 fr.pc=0x000001cc9907bf20 relative=0x0000000000002900
+Event: 24.233 Thread 0x000001cc894c3360 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001cc9907bf20 method=Engine.MouseInput.input()V @ 44 c2
+Event: 24.234 Thread 0x000001cc894c3360 DEOPT PACKING pc=0x000001cc9907bf20 sp=0x00000081b6fff490
+Event: 24.234 Thread 0x000001cc894c3360 DEOPT UNPACKING pc=0x000001cc9889a5a3 sp=0x00000081b6fff380 mode 2
+Event: 24.593 Thread 0x000001cc894c3360 Uncommon trap: trap_request=0xffffff45 fr.pc=0x000001cc9909d518 relative=0x0000000000002678
+Event: 24.593 Thread 0x000001cc894c3360 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001cc9909d518 method=Engine.MouseInput.input()V @ 44 c2
+Event: 24.593 Thread 0x000001cc894c3360 DEOPT PACKING pc=0x000001cc9909d518 sp=0x00000081b6fff490
+Event: 24.593 Thread 0x000001cc894c3360 DEOPT UNPACKING pc=0x000001cc9889a5a3 sp=0x00000081b6fff380 mode 2
+Event: 33.771 Thread 0x000001cc894c3360 DEOPT PACKING pc=0x000001cc9188b8aa sp=0x00000081b6fff3b0
+Event: 33.771 Thread 0x000001cc894c3360 DEOPT UNPACKING pc=0x000001cc9889b0e3 sp=0x00000081b6ffe968 mode 0
+Event: 33.883 Thread 0x000001cc894c3360 Uncommon trap: trap_request=0xffffff45 fr.pc=0x000001cc9908f97c relative=0x00000000000022dc
+Event: 33.883 Thread 0x000001cc894c3360 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001cc9908f97c method=Engine.MouseInput.input()V @ 44 c2
+Event: 33.883 Thread 0x000001cc894c3360 DEOPT PACKING pc=0x000001cc9908f97c sp=0x00000081b6fff490
+Event: 33.883 Thread 0x000001cc894c3360 DEOPT UNPACKING pc=0x000001cc9889a5a3 sp=0x00000081b6fff380 mode 2
+Event: 115.589 Thread 0x000001cc894c3360 Uncommon trap: trap_request=0xffffff45 fr.pc=0x000001cc9908bc6c relative=0x0000000000000d4c
+Event: 115.589 Thread 0x000001cc894c3360 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001cc9908bc6c method=java.nio.Bits.tryReserveMemory(JJ)Z @ 30 c2
+Event: 115.589 Thread 0x000001cc894c3360 DEOPT PACKING pc=0x000001cc9908bc6c sp=0x00000081b6fff1f0
+Event: 115.589 Thread 0x000001cc894c3360 DEOPT UNPACKING pc=0x000001cc9889a5a3 sp=0x00000081b6fff058 mode 2
+Event: 258.157 Thread 0x000001ccb1508140 DEOPT PACKING pc=0x000001cc9149102d sp=0x00000081b76ff150
+Event: 258.157 Thread 0x000001ccb1508140 DEOPT UNPACKING pc=0x000001cc9889b0e3 sp=0x00000081b76fe5f0 mode 0
+
+Classes loaded (20 events):
+Event: 1.034 Loading class sun/util/resources/cldr/TimeZoneNames_en_US
+Event: 1.034 Loading class sun/util/resources/cldr/TimeZoneNames_en_US done
+Event: 1.034 Loading class java/util/LinkedHashMap$LinkedKeySet
+Event: 1.034 Loading class java/util/LinkedHashMap$LinkedKeySet done
+Event: 1.035 Loading class java/time/zone/ZoneRulesProvider
+Event: 1.035 Loading class java/time/zone/ZoneRulesProvider done
+Event: 1.035 Loading class java/time/zone/ZoneRulesProvider$1
+Event: 1.035 Loading class java/time/zone/ZoneRulesProvider$1 done
+Event: 1.035 Loading class java/time/zone/TzdbZoneRulesProvider
+Event: 1.035 Loading class java/time/zone/TzdbZoneRulesProvider done
+Event: 1.037 Loading class java/time/zone/Ser
+Event: 1.037 Loading class java/time/zone/Ser done
+Event: 1.037 Loading class java/time/zone/ZoneOffsetTransition
+Event: 1.037 Loading class java/time/zone/ZoneOffsetTransition done
+Event: 1.039 Loading class sun/util/cldr/CLDRBaseLocaleDataMetaInfo$TZCanonicalIDMapHolder
+Event: 1.040 Loading class sun/util/cldr/CLDRBaseLocaleDataMetaInfo$TZCanonicalIDMapHolder done
+Event: 1.041 Loading class sun/util/resources/TimeZoneNames
+Event: 1.041 Loading class sun/util/resources/TimeZoneNames done
+Event: 1.042 Loading class sun/util/resources/TimeZoneNames_en
+Event: 1.042 Loading class sun/util/resources/TimeZoneNames_en done
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 0.291 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x0000000712616100}> (0x0000000712616100) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.296 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x000000071263e3c8}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object, int, long)'> (0x000000071263e3c8) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.297 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x0000000712643c98}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, java.lang.Object, int)'> (0x0000000712643c98) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.298 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x0000000712651c38}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object, long, long)'> (0x0000000712651c38) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.298 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x0000000712657d50}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, java.lang.Object, long)'> (0x0000000712657d50) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.299 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x000000071265bdb0}: 'java.lang.Object java.lang.invoke.Invokers$Holder.linkToTargetMethod(java.lang.Object, long, java.lang.Object)'> (0x000000071265bdb0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.299 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x0000000712663338}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object, java.lang.Object, long)'> (0x0000000712663338) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.311 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x00000007126c0968}> (0x00000007126c0968) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.311 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x00000007126c0cf8}> (0x00000007126c0cf8) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.325 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x0000000712756700}> (0x0000000712756700) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.325 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x0000000712756a60}> (0x0000000712756a60) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.326 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x000000071275c898}: 'int java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object)'> (0x000000071275c898) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.654 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x00000007127e3cb0}: 'void java.lang.System.load(java.lang.String, java.lang.Class)'> (0x00000007127e3cb0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.655 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x00000007127e6ab8}: 'void java.lang.System.loadLibrary(java.lang.String, java.lang.Class)'> (0x00000007127e6ab8) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.659 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x00000007127f9e98}> (0x00000007127f9e98) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.659 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x00000007127fa228}> (0x00000007127fa228) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.662 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x0000000712408630}> (0x0000000712408630) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.662 Thread 0x000001cc894c3360 Exception <a 'sun/nio/fs/WindowsException'{0x0000000712408900}> (0x0000000712408900) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 517]
+Event: 0.732 Thread 0x000001cc894c3360 Exception <a 'java/lang/NoSuchMethodError'{0x00000007122bd9d0}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, int)'> (0x00000007122bd9d0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 1.044 Thread 0x000001ccb1513bc0 Exception <a 'java/lang/NoSuchMethodError'{0x0000000710781858}: 'java.lang.Object java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x0000000710781858) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+
+VM Operations (20 events):
+Event: 1069.603 Executing VM operation: G1CollectForAllocation
+Event: 1069.604 Executing VM operation: G1CollectForAllocation done
+Event: 1072.788 Executing VM operation: G1CollectForAllocation
+Event: 1072.790 Executing VM operation: G1CollectForAllocation done
+Event: 1075.201 Executing VM operation: G1CollectForAllocation
+Event: 1075.203 Executing VM operation: G1CollectForAllocation done
+Event: 1077.598 Executing VM operation: G1CollectForAllocation
+Event: 1077.600 Executing VM operation: G1CollectForAllocation done
+Event: 1079.990 Executing VM operation: G1CollectForAllocation
+Event: 1079.992 Executing VM operation: G1CollectForAllocation done
+Event: 1082.403 Executing VM operation: G1CollectForAllocation
+Event: 1082.404 Executing VM operation: G1CollectForAllocation done
+Event: 1084.819 Executing VM operation: G1CollectForAllocation
+Event: 1084.820 Executing VM operation: G1CollectForAllocation done
+Event: 1087.322 Executing VM operation: G1CollectForAllocation
+Event: 1087.323 Executing VM operation: G1CollectForAllocation done
+Event: 1101.903 Executing VM operation: G1CollectForAllocation
+Event: 1101.904 Executing VM operation: G1CollectForAllocation done
+Event: 1106.123 Executing VM operation: G1CollectForAllocation
+Event: 1106.124 Executing VM operation: G1CollectForAllocation done
+
+Events (20 events):
+Event: 33.885 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9170e690
+Event: 33.885 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9170f010
+Event: 33.885 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9171da10
+Event: 33.885 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc91720010
+Event: 33.885 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc91725290
+Event: 33.885 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9177d590
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9181af10
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9181b410
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc91848210
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9184a390
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9184af10
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc91852b10
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9185ed10
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc91877b10
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9187a690
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9187b110
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9187bc90
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9187e890
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc9187f410
+Event: 33.886 Thread 0x000001ccb15273e0 flushing nmethod 0x000001cc91881c10
+
+
+Dynamic libraries:
+0x00007ff7bfd80000 - 0x00007ff7bfd8e000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\java.exe
+0x00007ffcce8b0000 - 0x00007ffcceac4000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffccd240000 - 0x00007ffccd302000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffccbf30000 - 0x00007ffccc2cc000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x000000005b560000 - 0x000000005b891000 	C:\Program Files\Norton Security\NortonData\22.22.9.11\Definitions\IPSDefs\20230413.061\IPSEng64.dll
+0x00007ffccd170000 - 0x00007ffccd21e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffccce00000 - 0x00007ffcccea7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffcccd50000 - 0x00007ffcccdf4000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffcce560000 - 0x00007ffcce677000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffcce860000 - 0x00007ffcce868000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffccbcf0000 - 0x00007ffccbe01000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc23640000 - 0x00007ffc23657000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\jli.dll
+0x00007ffc23880000 - 0x00007ffc2389b000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\VCRUNTIME140.dll
+0x00007ffccc6c0000 - 0x00007ffccc86b000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffccbe90000 - 0x00007ffccbeb6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffcbd7c0000 - 0x00007ffcbda4e000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d\COMCTL32.dll
+0x00007ffcce130000 - 0x00007ffcce159000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffccc2d0000 - 0x00007ffccc3e3000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffccc620000 - 0x00007ffccc6ba000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffcce160000 - 0x00007ffcce191000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffca60f0000 - 0x00007ffca60fc000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\vcruntime140_1.dll
+0x00007ffc235b0000 - 0x00007ffc2363e000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\msvcp140.dll
+0x00007ffc22020000 - 0x00007ffc22ce0000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\server\jvm.dll
+0x00007ffcc8d10000 - 0x00007ffcc8d19000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffcb8350000 - 0x00007ffcb835a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffcb8750000 - 0x00007ffcb8784000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffccceb0000 - 0x00007ffcccf21000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffccadf0000 - 0x00007ffccae08000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffca5d20000 - 0x00007ffca5d2a000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\jimage.dll
+0x00007ffcc96f0000 - 0x00007ffcc991e000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffccd310000 - 0x00007ffccd699000 	C:\WINDOWS\System32\combase.dll
+0x00007ffccd6a0000 - 0x00007ffccd777000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffcbdc20000 - 0x00007ffcbdc52000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffccbe10000 - 0x00007ffccbe8b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffcc8fa0000 - 0x00007ffcc8fae000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\instrument.dll
+0x00007ffc23580000 - 0x00007ffc235a6000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\java.dll
+0x00007ffc234a0000 - 0x00007ffc23577000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\jsvml.dll
+0x00007ffccd790000 - 0x00007ffccdf80000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffcc9cb0000 - 0x00007ffcca57d000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ffcc9b70000 - 0x00007ffcc9cae000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007ffccd070000 - 0x00007ffccd161000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ffcce680000 - 0x00007ffcce6de000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffccbc20000 - 0x00007ffccbc41000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffc23440000 - 0x00007ffc23458000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\zip.dll
+0x00007ffc23480000 - 0x00007ffc23493000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\net.dll
+0x00007ffcbc180000 - 0x00007ffcbc2b7000 	C:\WINDOWS\SYSTEM32\WINHTTP.dll
+0x00007ffccb260000 - 0x00007ffccb2c9000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffc23460000 - 0x00007ffc23476000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\nio.dll
+0x00007ffcbdda0000 - 0x00007ffcbddba000 	J:\InteliJ\IntelliJ IDEA Community Edition 2022.3.2\bin\breakgen64.dll
+0x00007ffca52a0000 - 0x00007ffca52a8000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\extnet.dll
+0x00007ffca46c0000 - 0x00007ffca46d0000 	C:\Users\User\.jdks\openjdk-19.0.2\bin\verify.dll
+0x00007ffcb5a40000 - 0x00007ffcb5ab5000 	C:\Users\User\AppData\Local\Temp\lwjglUser\3.3.1-build-7\lwjgl.dll
+0x00007ffc94980000 - 0x00007ffc94bd9000 	C:\Users\User\AppData\Local\Temp\lwjglUser\3.3.1-build-7\jemalloc.dll
+0x00007ffcb59d0000 - 0x00007ffcb5a31000 	C:\Users\User\AppData\Local\Temp\lwjglUser\3.3.1-build-7\glfw.dll
+0x00007ffc8cc80000 - 0x00007ffc8ccc6000 	C:\WINDOWS\SYSTEM32\dinput8.dll
+0x00007ffcb7150000 - 0x00007ffcb7161000 	C:\WINDOWS\SYSTEM32\xinput1_4.dll
+0x00007ffccba00000 - 0x00007ffccba2c000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00007ffccb9b0000 - 0x00007ffccb9fe000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ffcc92c0000 - 0x00007ffcc92eb000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007ffca3ed0000 - 0x00007ffca40d1000 	C:\WINDOWS\SYSTEM32\inputhost.dll
+0x00007ffcc6290000 - 0x00007ffcc63c3000 	C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+0x00007ffcc9090000 - 0x00007ffcc913b000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ffccb500000 - 0x00007ffccb50c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+0x00007ffccdf80000 - 0x00007ffcce09e000 	C:\WINDOWS\System32\MSCTF.dll
+0x00007ffcaa350000 - 0x00007ffcaa450000 	C:\WINDOWS\SYSTEM32\opengl32.dll
+0x00007ffcb7ec0000 - 0x00007ffcb7eed000 	C:\WINDOWS\SYSTEM32\GLU32.dll
+0x00007ffcc9170000 - 0x00007ffcc91a6000 	C:\WINDOWS\SYSTEM32\dxcore.dll
+0x00007ffcc4980000 - 0x00007ffcc49c8000 	C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+0x00007ffcccf30000 - 0x00007ffcccfe0000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ffc0c0f0000 - 0x00007ffc0ea83000 	C:\WINDOWS\System32\DriverStore\FileRepository\nvacegpu.inf_amd64_fbcc2c77061c3706\nvoglv64.dll
+0x00007ffccc870000 - 0x00007ffcccce4000 	C:\WINDOWS\System32\SETUPAPI.dll
+0x00007ffcce1a0000 - 0x00007ffcce33c000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffcc2d20000 - 0x00007ffcc2d34000 	C:\WINDOWS\SYSTEM32\WTSAPI32.dll
+0x00007ffccb990000 - 0x00007ffccb9a2000 	C:\WINDOWS\SYSTEM32\msasn1.dll
+0x00007ffcb8310000 - 0x00007ffcb8342000 	C:\WINDOWS\SYSTEM32\cryptnet.dll
+0x00007ffccc3f0000 - 0x00007ffccc556000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ffccbec0000 - 0x00007ffccbf2b000 	C:\WINDOWS\System32\WINTRUST.dll
+0x00007ffccae10000 - 0x00007ffccae44000 	C:\WINDOWS\SYSTEM32\ntmarta.dll
+0x00007ffc66920000 - 0x00007ffc66bd9000 	C:\WINDOWS\system32\nvspcap64.dll
+0x00007ffccabc0000 - 0x00007ffccac0d000 	C:\WINDOWS\SYSTEM32\powrprof.dll
+0x00007ffccaba0000 - 0x00007ffccabb3000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffcca7d0000 - 0x00007ffcca836000 	C:\WINDOWS\SYSTEM32\WINSTA.dll
+0x00007ffccd220000 - 0x00007ffccd23f000 	C:\WINDOWS\System32\imagehlp.dll
+0x00007ffccb4e0000 - 0x00007ffccb4fb000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x00007ffccad60000 - 0x00007ffccad95000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ffccb6a0000 - 0x00007ffccb6c8000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ffca95a0000 - 0x00007ffca9c92000 	C:\WINDOWS\SYSTEM32\nvapi64.dll
+0x00007ffcb6e10000 - 0x00007ffcb6f3e000 	C:\WINDOWS\SYSTEM32\textinputframework.dll
+0x00007ffcc4380000 - 0x00007ffcc46ec000 	C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+0x00007ffcb3d50000 - 0x00007ffcb3dad000 	C:\Users\User\AppData\Local\Temp\lwjglUser\3.3.1-build-7\lwjgl_opengl.dll
+0x00007ffcc6670000 - 0x00007ffcc6706000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ffcc91b0000 - 0x00007ffcc92a6000 	C:\WINDOWS\system32\dxgi.dll
+0x00007ffcc5390000 - 0x00007ffcc55e7000 	C:\WINDOWS\system32\d3d11.dll
+0x00007ffc4d330000 - 0x00007ffc4d435000 	C:\WINDOWS\System32\DriverStore\FileRepository\nvacegpu.inf_amd64_fbcc2c77061c3706\nvldumdx.dll
+0x00007ffc07710000 - 0x00007ffc0c0e7000 	C:\WINDOWS\System32\DriverStore\FileRepository\nvacegpu.inf_amd64_fbcc2c77061c3706\nvwgf2umx.dll
+0x00007ffcc1560000 - 0x00007ffcc2d1c000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e31d62740aef2af9\igd10iumd64.dll
+0x00007ffccb670000 - 0x00007ffccb69e000 	C:\WINDOWS\SYSTEM32\ncrypt.dll
+0x00007ffccb630000 - 0x00007ffccb667000 	C:\WINDOWS\SYSTEM32\NTASN1.dll
+0x00007ffcc1190000 - 0x00007ffcc1551000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e31d62740aef2af9\igdgmm64.dll
+0x00007ffcbdf80000 - 0x00007ffcc1186000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e31d62740aef2af9\igc64.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: (cannot be retrieved)
+
+VM Arguments:
+jvm_args: -javaagent:J:\InteliJ\IntelliJ IDEA Community Edition 2022.3.2\lib\idea_rt.jar=51247:J:\InteliJ\IntelliJ IDEA Community Edition 2022.3.2\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: org.example.Main
+java_class_path (initial): C:\Users\User\IdeaProjects\GrafkomJoy - Copy\target\classes;C:\Users\User\.m2\repository\org\lwjgl\lwjgl\3.3.1\lwjgl-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-assimp\3.3.1\lwjgl-assimp-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-bgfx\3.3.1\lwjgl-bgfx-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-cuda\3.3.1\lwjgl-cuda-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-egl\3.3.1\lwjgl-egl-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-glfw\3.3.1\lwjgl-glfw-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-jawt\3.3.1\lwjgl-jawt-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-jemalloc\3.3.1\lwjgl-jemalloc-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-libdivide\3.3.1\lwjgl-libdivide-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-llvm\3.3.1\lwjgl-llvm-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-lmdb\3.3.1\lwjgl-lmdb-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-lz4\3.3.1\lwjgl-lz4-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-meow\3.3.1\lwjgl-meow-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-meshoptimizer\3.3.1\lwjgl-meshoptimizer-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-nanovg\3.3.1\lwjgl-nanovg-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-nfd\3.3.1\lwjgl-nfd-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-nuklear\3.3.1\lwjgl-nuklear-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-odbc\3.3.1\lwjgl-odbc-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-openal\3.3.1\lwjgl-openal-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-opencl\3.3.1\lwjgl-opencl-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-opengl\3.3.1\lwjgl-opengl-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-opengles\3.3.1\lwjgl-opengles-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-openvr\3.3.1\lwjgl-openvr-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-openxr\3.3.1\lwjgl-openxr-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-opus\3.3.1\lwjgl-opus-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-ovr\3.3.1\lwjgl-ovr-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-par\3.3.1\lwjgl-par-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-remotery\3.3.1\lwjgl-remotery-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-rpmalloc\3.3.1\lwjgl-rpmalloc-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-shaderc\3.3.1\lwjgl-shaderc-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-spvc\3.3.1\lwjgl-spvc-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-sse\3.3.1\lwjgl-sse-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-stb\3.3.1\lwjgl-stb-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-tinyexr\3.3.1\lwjgl-tinyexr-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-tinyfd\3.3.1\lwjgl-tinyfd-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-tootle\3.3.1\lwjgl-tootle-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-vma\3.3.1\lwjgl-vma-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-vulkan\3.3.1\lwjgl-vulkan-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-xxhash\3.3.1\lwjgl-xxhash-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-yoga\3.3.1\lwjgl-yoga-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-zstd\3.3.1\lwjgl-zstd-3.3.1.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl\3.3.1\lwjgl-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-assimp\3.3.1\lwjgl-assimp-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-bgfx\3.3.1\lwjgl-bgfx-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-glfw\3.3.1\lwjgl-glfw-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-jemalloc\3.3.1\lwjgl-jemalloc-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-libdivide\3.3.1\lwjgl-libdivide-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-llvm\3.3.1\lwjgl-llvm-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-lmdb\3.3.1\lwjgl-lmdb-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-lz4\3.3.1\lwjgl-lz4-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-meow\3.3.1\lwjgl-meow-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-meshoptimizer\3.3.1\lwjgl-meshoptimizer-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-nanovg\3.3.1\lwjgl-nanovg-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-nfd\3.3.1\lwjgl-nfd-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-nuklear\3.3.1\lwjgl-nuklear-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-openal\3.3.1\lwjgl-openal-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-opengl\3.3.1\lwjgl-opengl-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-opengles\3.3.1\lwjgl-opengles-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-openvr\3.3.1\lwjgl-openvr-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-openxr\3.3.1\lwjgl-openxr-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-opus\3.3.1\lwjgl-opus-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-ovr\3.3.1\lwjgl-ovr-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-par\3.3.1\lwjgl-par-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-remotery\3.3.1\lwjgl-remotery-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-rpmalloc\3.3.1\lwjgl-rpmalloc-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-shaderc\3.3.1\lwjgl-shaderc-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-spvc\3.3.1\lwjgl-spvc-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-sse\3.3.1\lwjgl-sse-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-stb\3.3.1\lwjgl-stb-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-tinyexr\3.3.1\lwjgl-tinyexr-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-tinyfd\3.3.1\lwjgl-tinyfd-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-tootle\3.3.1\lwjgl-tootle-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-vma\3.3.1\lwjgl-vma-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-xxhash\3.3.1\lwjgl-xxhash-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-yoga\3.3.1\lwjgl-yoga-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\lwjgl\lwjgl-zstd\3.3.1\lwjgl-zstd-3.3.1-natives-windows.jar;C:\Users\User\.m2\repository\org\joml\joml\1.10.5\joml-1.10.5.jar;C:\Users\User\.m2\repository\org\lwjglx\lwjgl3-awt\0.1.8\lwjgl3-awt-0.1.8.jar;C:\Users\User\.m2\repository\com\code-disaster\steamworks4j\steamworks4j\1.9.0\steamworks4j-1.9.0.jar;C:\Users\User\.m2\repository\com\code-disaster\steamworks4j\steamworks4j-server\1.9.0\steamworks4j-server-1.9.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 4238344192                                {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4238344192                             {manageable} {ergonomic}
+   size_t MaxNewSize                               = 2541748224                                {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=J:\VMware\bin\;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Microsoft\WindowsApps;J:\VSC\Microsoft VS Code\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;;J:\VSC\Microsoft VS Code\bin
+USERNAME=User
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+TMP=C:\Users\User\AppData\Local\Temp
+TEMP=C:\Users\User\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.1485)
+OS uptime: 2 days 3:20 hours
+Hyper-V role detected
+
+CPU: total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 141 stepping 1 microcode 0x3c, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi, hv, rdtscp, rdpid, fsrm, gfni, avx512_bitalg
+
+Memory: 4k page, system-wide physical 16163M (178M free)
+TotalPageFile size 41788M (AvailPageFile size 0M)
+current process WorkingSet (physical memory assigned to process): 8691M, peak: 9232M
+current process commit charge ("private bytes"): 28309M, peak: 28311M
+
+vm_info: OpenJDK 64-Bit Server VM (19.0.2+7-44) for windows-amd64 JRE (19.0.2+7-44), built on 2022-11-30T18:02:09Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
